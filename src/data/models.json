@@ -1,0 +1,4615 @@
+{
+    "models": [
+        {
+            "id": "gpt-4o",
+            "name": "GPT-4o",
+            "provider": "OpenAI",
+            "type": "Multimodal",
+            "category": [
+                "general-purpose",
+                "vision",
+                "voice",
+                "reasoning"
+            ],
+            "contextWindow": 128000,
+            "strengths": [
+                "Omni-model (Voice, Vision, Text)",
+                "Industry standard performance",
+                "Extensive ecosystem & SDK support",
+                "Excellent tool/function calling",
+                "Large developer community"
+            ],
+            "weaknesses": [
+                "Cost scales quickly at enterprise volume",
+                "Sometimes prone to 'laziness' in long outputs",
+                "Closed-source model",
+                "Rate limits on free tier"
+            ],
+            "useCases": [
+                "Customer service chatbots",
+                "Multimodal document analysis",
+                "General-purpose AI assistant",
+                "Content generation",
+                "Code review"
+            ],
+            "notRecommendedFor": [
+                "Ultra-low latency apps",
+                "Budget-constrained student projects",
+                "Privacy-critical on-premise deployments"
+            ],
+            "performance": {
+                "speedTier": "fast",
+                "latency": "1-2s",
+                "throughput": "High"
+            },
+            "costTier": "expensive",
+            "idealFor": [
+                "enterprise",
+                "startups",
+                "developers"
+            ],
+            "pricing": {
+                "input": "$5/1M tokens",
+                "output": "$15/1M tokens",
+                "tier": "premium",
+                "inputNum": 5,
+                "outputNum": 15
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": true,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 88.7,
+                "humaneval": 90.2,
+                "gsm8k": 95.3,
+                "hellaswag": 89.2,
+                "arc": 93.6,
+                "reasoning": 92,
+                "coding": 88,
+                "math": 94,
+                "language": 95,
+                "knowledge": 92
+            },
+            "apiEndpoint": "https://api.openai.com/v1/chat/completions",
+            "releaseDate": "2024-05",
+            "description": "OpenAI's flagship multimodal model supporting text, vision, and audio. Offers the best balance of capability, speed, and cost in the GPT family. Ideal for production applications requiring broad AI capabilities.",
+            "architecture": "Transformer",
+            "parameterCount": "Undisclosed (~200B estimated)",
+            "knowledgeCutoff": "October 2023",
+            "trainingData": "Proprietary multimodal dataset",
+            "maxOutput": 16384,
+            "license": "Proprietary"
+        },
+        {
+            "id": "gpt-4-turbo",
+            "name": "GPT-4 Turbo",
+            "provider": "OpenAI",
+            "type": "LLM",
+            "category": [
+                "reasoning",
+                "general-purpose",
+                "coding"
+            ],
+            "contextWindow": 128000,
+            "strengths": [
+                "Superior reasoning capabilities",
+                "Excellent instruction following",
+                "Strong code generation",
+                "Multimodal support (vision)",
+                "128K context window"
+            ],
+            "weaknesses": [
+                "Higher latency compared to smaller models",
+                "More expensive than GPT-4o",
+                "Occasional overconfidence in answers"
+            ],
+            "useCases": [
+                "Complex reasoning tasks",
+                "Advanced code generation",
+                "Document analysis",
+                "Multi-step problem solving"
+            ],
+            "notRecommendedFor": [
+                "Simple queries",
+                "High-frequency API calls",
+                "Latency-sensitive applications"
+            ],
+            "performance": {
+                "speedTier": "balanced",
+                "latency": "2-5s",
+                "throughput": "Moderate"
+            },
+            "costTier": "expensive",
+            "idealFor": [
+                "enterprise",
+                "researchers",
+                "advanced-developers"
+            ],
+            "pricing": {
+                "input": "$10/1M tokens",
+                "output": "$30/1M tokens",
+                "tier": "premium",
+                "inputNum": 10,
+                "outputNum": 30
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": true,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 86.4,
+                "humaneval": 87.3,
+                "gsm8k": 92.0,
+                "hellaswag": 87.5,
+                "arc": 91.2,
+                "reasoning": 90,
+                "coding": 86,
+                "math": 92,
+                "language": 93,
+                "knowledge": 91
+            },
+            "apiEndpoint": "https://api.openai.com/v1/chat/completions",
+            "releaseDate": "2024-04",
+            "description": "OpenAI's previous flagship before GPT-4o. Still widely used for its deep reasoning capabilities and strong code generation. Best for complex, multi-step analytical tasks."
+        },
+        {
+            "id": "gpt-4o-mini",
+            "name": "GPT-4o Mini",
+            "provider": "OpenAI",
+            "type": "LLM",
+            "category": [
+                "general-purpose",
+                "cost-efficient"
+            ],
+            "contextWindow": 128000,
+            "strengths": [
+                "Extremely cost-effective",
+                "Good performance for simple tasks",
+                "Same API as GPT-4o",
+                "Fast response times",
+                "128K context",
+                "Highly scalable for high-volume apps",
+                "Built-in safety mitigations"
+            ],
+            "weaknesses": [
+                "Weaker reasoning than full GPT-4o",
+                "Lower quality creative writing",
+                "Less reliable on complex tasks",
+                "Limited knowledge beyond cutoff",
+                "Context recall degrades at max context"
+            ],
+            "useCases": [
+                "Quick Q&A",
+                "Content moderation",
+                "Simple classification",
+                "Summarization",
+                "Data extraction",
+                "Support ticket routing",
+                "Basic translation",
+                "Sentiment analysis",
+                "Email drafting",
+                "Meeting notes cleanup"
+            ],
+            "notRecommendedFor": [
+                "Complex multi-step reasoning",
+                "Production-grade code generation",
+                "Research tasks requiring deep analysis",
+                "Nuanced creative writing",
+                "High-stakes medical/legal advice"
+            ],
+            "safety": "Aligned with OpenAI's safety standards, including content filtering and moderation endpoints.",
+            "performance": {
+                "speedTier": "fast",
+                "latency": "0.5-1.5s",
+                "throughput": "Very High"
+            },
+            "costTier": "cheap",
+            "idealFor": [
+                "students",
+                "startups",
+                "developers"
+            ],
+            "pricing": {
+                "input": "$0.15/1M tokens",
+                "output": "$0.60/1M tokens",
+                "tier": "budget",
+                "inputNum": 0.15,
+                "outputNum": 0.60
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": true,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 82.0,
+                "humaneval": 87.0,
+                "gsm8k": 87.0,
+                "hellaswag": 83.0,
+                "arc": 85.0,
+                "reasoning": 80,
+                "coding": 82,
+                "math": 84,
+                "language": 88,
+                "knowledge": 83
+            },
+            "apiEndpoint": "https://api.openai.com/v1/chat/completions",
+            "releaseDate": "2024-07",
+            "description": "OpenAI's most cost-effective small model. Designed to replace GPT-3.5 Turbo with significantly better performance at a lower price point. Perfect for high-volume, simple-to-moderate tasks."
+        },
+        {
+            "id": "o1",
+            "name": "o1",
+            "provider": "OpenAI",
+            "type": "Reasoning",
+            "category": [
+                "reasoning",
+                "math",
+                "coding",
+                "science"
+            ],
+            "contextWindow": 200000,
+            "strengths": [
+                "Chain-of-thought reasoning built-in",
+                "State-of-the-art math performance",
+                "Excellent at complex problem solving",
+                "PhD-level science reasoning",
+                "200K context window"
+            ],
+            "weaknesses": [
+                "Very expensive",
+                "Higher latency due to thinking",
+                "No streaming support initially",
+                "No system prompt support"
+            ],
+            "useCases": [
+                "Scientific research",
+                "Advanced mathematics",
+                "Complex coding challenges",
+                "Strategic planning",
+                "PhD-level analysis"
+            ],
+            "notRecommendedFor": [
+                "Simple Q&A",
+                "Casual conversation",
+                "Budget projects",
+                "Real-time applications"
+            ],
+            "performance": {
+                "speedTier": "heavy",
+                "latency": "10-60s",
+                "throughput": "Low"
+            },
+            "costTier": "very-expensive",
+            "idealFor": [
+                "researchers",
+                "enterprise",
+                "advanced-developers"
+            ],
+            "pricing": {
+                "input": "$15/1M tokens",
+                "output": "$60/1M tokens",
+                "tier": "premium",
+                "inputNum": 15,
+                "outputNum": 60
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": false,
+                "vision": true,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 92.3,
+                "humaneval": 92.4,
+                "gsm8k": 97.8,
+                "hellaswag": 91.0,
+                "arc": 96.7,
+                "reasoning": 98,
+                "coding": 93,
+                "math": 98,
+                "language": 90,
+                "knowledge": 94
+            },
+            "apiEndpoint": "https://api.openai.com/v1/chat/completions",
+            "releaseDate": "2024-12",
+            "description": "OpenAI's most powerful reasoning model. Uses internal chain-of-thought to solve complex problems. Excels at math, science, and coding challenges that require deep analytical thinking."
+        },
+        {
+            "id": "claude-3-5-sonnet",
+            "name": "Claude 3.5 Sonnet",
+            "provider": "Anthropic",
+            "type": "LLM",
+            "category": [
+                "coding",
+                "reasoning",
+                "analysis"
+            ],
+            "contextWindow": 200000,
+            "strengths": [
+                "Exceptional coding capabilities (#1 for code)",
+                "Human-like writing style",
+                "Strong visual analysis with Artifacts",
+                "Low hallucination rate",
+                "200K context window"
+            ],
+            "weaknesses": [
+                "Strict safety filters can block benign requests",
+                "API waitlists for high-tier usage",
+                "Less strong at pure math vs o1"
+            ],
+            "useCases": [
+                "Software development & debugging",
+                "Technical writing",
+                "Data extraction & analysis",
+                "Document summarization",
+                "Code review & refactoring"
+            ],
+            "notRecommendedFor": [
+                "Generating controversial content",
+                "Extremely creative fiction",
+                "Tasks requiring real-time data"
+            ],
+            "performance": {
+                "speedTier": "fast",
+                "latency": "1-3s",
+                "throughput": "High"
+            },
+            "costTier": "moderate",
+            "idealFor": [
+                "developers",
+                "enterprise",
+                "researchers"
+            ],
+            "pricing": {
+                "input": "$3/1M tokens",
+                "output": "$15/1M tokens",
+                "tier": "premium",
+                "inputNum": 3,
+                "outputNum": 15
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": true,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 88.7,
+                "humaneval": 92.0,
+                "gsm8k": 96.4,
+                "hellaswag": 89.2,
+                "arc": 94.4,
+                "reasoning": 95,
+                "coding": 98,
+                "math": 96,
+                "language": 94,
+                "knowledge": 90
+            },
+            "apiEndpoint": "https://api.anthropic.com/v1/messages",
+            "releaseDate": "2024-06",
+            "description": "Anthropic's most balanced model. Widely considered the best model for software engineering tasks. Its 'Artifacts' feature allows interactive code execution. Excellent for professional development workflows."
+        },
+        {
+            "id": "claude-3-opus",
+            "name": "Claude 3 Opus",
+            "provider": "Anthropic",
+            "type": "LLM",
+            "category": [
+                "reasoning",
+                "analysis",
+                "creative"
+            ],
+            "contextWindow": 200000,
+            "strengths": [
+                "Deepest analytical reasoning in Claude family",
+                "Excellent creative writing",
+                "Strong at nuanced topics",
+                "200K context window"
+            ],
+            "weaknesses": [
+                "Most expensive Claude model",
+                "Slower than Sonnet and Haiku",
+                "Being superseded by newer models"
+            ],
+            "useCases": [
+                "Deep research analysis",
+                "Complex creative writing",
+                "Legal document review",
+                "Strategic consulting"
+            ],
+            "notRecommendedFor": [
+                "Simple tasks",
+                "High-volume processing",
+                "Real-time applications"
+            ],
+            "performance": {
+                "speedTier": "heavy",
+                "latency": "3-8s",
+                "throughput": "Low"
+            },
+            "costTier": "very-expensive",
+            "idealFor": [
+                "researchers",
+                "enterprise"
+            ],
+            "pricing": {
+                "input": "$15/1M tokens",
+                "output": "$75/1M tokens",
+                "tier": "premium",
+                "inputNum": 15,
+                "outputNum": 75
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": true,
+                "functionCalling": true,
+                "jsonMode": false
+            },
+            "benchmarks": {
+                "mmlu": 86.8,
+                "humaneval": 84.9,
+                "gsm8k": 95.0,
+                "hellaswag": 88.0,
+                "arc": 92.0,
+                "reasoning": 93,
+                "coding": 90,
+                "math": 93,
+                "language": 96,
+                "knowledge": 91
+            },
+            "apiEndpoint": "https://api.anthropic.com/v1/messages",
+            "releaseDate": "2024-03",
+            "description": "Anthropic's most powerful model for complex analytical tasks. Excels at in-depth research, nuanced reasoning, and creative endeavors requiring deep understanding."
+        },
+        {
+            "id": "claude-3-5-haiku",
+            "name": "Claude 3.5 Haiku",
+            "provider": "Anthropic",
+            "type": "LLM",
+            "category": [
+                "general-purpose",
+                "cost-efficient"
+            ],
+            "contextWindow": 200000,
+            "strengths": [
+                "Fastest Claude model",
+                "Very cost-effective",
+                "Great for simple tasks",
+                "200K context window",
+                "Low latency"
+            ],
+            "weaknesses": [
+                "Weaker reasoning than Sonnet/Opus",
+                "Less capable at complex code",
+                "Lower creative quality"
+            ],
+            "useCases": [
+                "Quick chatbots",
+                "Content moderation",
+                "Simple classification",
+                "Data extraction",
+                "Summarization"
+            ],
+            "notRecommendedFor": [
+                "Complex reasoning",
+                "Advanced code generation",
+                "Research tasks"
+            ],
+            "performance": {
+                "speedTier": "fast",
+                "latency": "0.5-1s",
+                "throughput": "Very High"
+            },
+            "costTier": "cheap",
+            "idealFor": [
+                "students",
+                "startups",
+                "developers"
+            ],
+            "pricing": {
+                "input": "$1/1M tokens",
+                "output": "$5/1M tokens",
+                "tier": "budget",
+                "inputNum": 1,
+                "outputNum": 5
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": true,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 75.2,
+                "humaneval": 75.0,
+                "gsm8k": 80.4,
+                "hellaswag": 78.5,
+                "arc": 80.0,
+                "reasoning": 75,
+                "coding": 78,
+                "math": 76,
+                "language": 82,
+                "knowledge": 77
+            },
+            "apiEndpoint": "https://api.anthropic.com/v1/messages",
+            "releaseDate": "2024-11",
+            "description": "Anthropic's speed champion. Designed for high-throughput, low-latency applications where cost efficiency matters. Perfect replacement for GPT-3.5 class tasks."
+        },
+        {
+            "id": "gemini-2-0-flash",
+            "name": "Gemini 2.0 Flash",
+            "provider": "Google",
+            "type": "Multimodal",
+            "category": [
+                "general-purpose",
+                "vision",
+                "coding",
+                "reasoning"
+            ],
+            "contextWindow": 1000000,
+            "strengths": [
+                "1M token context window",
+                "Native multimodal (text, image, video, audio)",
+                "Free tier on Google AI Studio",
+                "Very fast inference",
+                "Grounding with Google Search"
+            ],
+            "weaknesses": [
+                "Newer model with less community adoption",
+                "Safety filters can be aggressive",
+                "API differences from OpenAI standard"
+            ],
+            "useCases": [
+                "Long document analysis",
+                "Video understanding",
+                "Multi-modal research",
+                "Search-grounded Q&A",
+                "Code generation"
+            ],
+            "notRecommendedFor": [
+                "Tasks requiring OpenAI-compatible API",
+                "Enterprise with existing OpenAI pipelines"
+            ],
+            "performance": {
+                "speedTier": "fast",
+                "latency": "1-2s",
+                "throughput": "Very High"
+            },
+            "costTier": "cheap",
+            "idealFor": [
+                "developers",
+                "students",
+                "researchers"
+            ],
+            "pricing": {
+                "input": "$0.10/1M tokens",
+                "output": "$0.40/1M tokens",
+                "tier": "budget",
+                "inputNum": 0.10,
+                "outputNum": 0.40
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": true,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 85.0,
+                "humaneval": 82.0,
+                "gsm8k": 89.0,
+                "hellaswag": 84.5,
+                "arc": 87.0,
+                "reasoning": 84,
+                "coding": 83,
+                "math": 86,
+                "language": 90,
+                "knowledge": 88
+            },
+            "apiEndpoint": "https://generativelanguage.googleapis.com/v1beta/models",
+            "releaseDate": "2025-01",
+            "description": "Google's latest multimodal model with native support for text, images, video, and audio. Its 1 million token context window is best-in-class. Free tier available on Google AI Studio."
+        },
+        {
+            "id": "gemini-1-5-pro",
+            "name": "Gemini 1.5 Pro",
+            "provider": "Google",
+            "type": "Multimodal",
+            "category": [
+                "reasoning",
+                "vision",
+                "long-context"
+            ],
+            "contextWindow": 2000000,
+            "strengths": [
+                "2M token context window (largest available)",
+                "Strong reasoning across modalities",
+                "Excellent at video/audio understanding",
+                "Competitive pricing"
+            ],
+            "weaknesses": [
+                "Can be slower on very long contexts",
+                "Less precise coding than Claude 3.5",
+                "Hallucination on edge cases"
+            ],
+            "useCases": [
+                "Entire codebase analysis",
+                "Book-length document processing",
+                "Long video understanding",
+                "Multi-document Q&A"
+            ],
+            "notRecommendedFor": [
+                "Simple short tasks",
+                "Tasks requiring fastest latency"
+            ],
+            "performance": {
+                "speedTier": "balanced",
+                "latency": "2-6s",
+                "throughput": "Moderate"
+            },
+            "costTier": "moderate",
+            "idealFor": [
+                "researchers",
+                "enterprise",
+                "developers"
+            ],
+            "pricing": {
+                "input": "$1.25/1M tokens",
+                "output": "$5/1M tokens",
+                "tier": "moderate",
+                "inputNum": 1.25,
+                "outputNum": 5
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": true,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 85.9,
+                "humaneval": 84.0,
+                "gsm8k": 91.7,
+                "hellaswag": 86.0,
+                "arc": 89.0,
+                "reasoning": 88,
+                "coding": 82,
+                "math": 89,
+                "language": 91,
+                "knowledge": 89
+            },
+            "apiEndpoint": "https://generativelanguage.googleapis.com/v1beta/models",
+            "releaseDate": "2024-05",
+            "description": "Google's workhorse model with the industry's largest context window at 2 million tokens. Can process entire codebases, books, or hours of video in a single prompt."
+        },
+        {
+            "id": "llama-3-3-70b",
+            "name": "Llama 3.3 70B",
+            "provider": "Meta",
+            "type": "LLM",
+            "category": [
+                "reasoning",
+                "general-purpose",
+                "coding"
+            ],
+            "contextWindow": 128000,
+            "strengths": [
+                "State-of-the-art open-source model",
+                "Excellent reasoning capabilities",
+                "Free on Groq & many providers",
+                "128K context window",
+                "Strong instruction following"
+            ],
+            "weaknesses": [
+                "Requires significant compute for self-hosting",
+                "Slower than 8B models",
+                "No native vision support"
+            ],
+            "useCases": [
+                "Complex reasoning tasks",
+                "Creative writing",
+                "Code generation",
+                "Summarization",
+                "Multi-step analysis"
+            ],
+            "notRecommendedFor": [
+                "Image/vision tasks",
+                "Ultra-low latency needs",
+                "Edge device deployment"
+            ],
+            "performance": {
+                "speedTier": "balanced",
+                "latency": "2-4s",
+                "throughput": "Moderate"
+            },
+            "costTier": "free-on-groq",
+            "idealFor": [
+                "developers",
+                "researchers",
+                "startups"
+            ],
+            "pricing": {
+                "input": "Free (Groq)",
+                "output": "Free (Groq)",
+                "tier": "free",
+                "inputNum": 0,
+                "outputNum": 0
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": false,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 85.2,
+                "humaneval": 82.6,
+                "gsm8k": 84.1,
+                "hellaswag": 86.8,
+                "arc": 88.4,
+                "reasoning": 85,
+                "coding": 78,
+                "math": 82,
+                "language": 92,
+                "knowledge": 88
+            },
+            "apiEndpoint": "https://api.groq.com/openai/v1/chat/completions",
+            "releaseDate": "2024-12",
+            "description": "Meta's flagship open-source model. Competes with proprietary models while being completely free. Available on Groq for blazing-fast inference at zero cost. Best open-source choice for general tasks."
+        },
+        {
+            "id": "llama-3-1-8b",
+            "name": "Llama 3.1 8B Instant",
+            "provider": "Meta",
+            "type": "LLM",
+            "category": [
+                "general-purpose",
+                "cost-efficient",
+                "fast"
+            ],
+            "contextWindow": 128000,
+            "strengths": [
+                "Ultra-fast inference speed",
+                "Free on Groq",
+                "Runs on consumer hardware",
+                "Great for simple tasks",
+                "128K context window"
+            ],
+            "weaknesses": [
+                "Weaker reasoning than 70B",
+                "Lower quality creative output",
+                "Less reliable on complex tasks",
+                "No vision support"
+            ],
+            "useCases": [
+                "Quick chatbots",
+                "Simple Q&A",
+                "Content classification",
+                "Text summarization",
+                "Rapid prototyping"
+            ],
+            "notRecommendedFor": [
+                "Complex reasoning",
+                "Advanced code generation",
+                "Research-grade analysis"
+            ],
+            "performance": {
+                "speedTier": "fast",
+                "latency": "0.3-1s",
+                "throughput": "Very High"
+            },
+            "costTier": "free-on-groq",
+            "idealFor": [
+                "students",
+                "startups",
+                "developers"
+            ],
+            "pricing": {
+                "input": "Free (Groq)",
+                "output": "Free (Groq)",
+                "tier": "free",
+                "inputNum": 0,
+                "outputNum": 0
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": false,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 72.3,
+                "humaneval": 72.6,
+                "gsm8k": 76.4,
+                "hellaswag": 78.5,
+                "arc": 75.3,
+                "reasoning": 70,
+                "coding": 68,
+                "math": 72,
+                "language": 80,
+                "knowledge": 74
+            },
+            "apiEndpoint": "https://api.groq.com/openai/v1/chat/completions",
+            "releaseDate": "2024-07",
+            "description": "Meta's lightweight, blazing-fast open-source model. Perfect for high-volume, simple tasks. Free on Groq with sub-second response times. Ideal entry point for developers."
+        },
+        {
+            "id": "llama-3-1-405b",
+            "name": "Llama 3.1 405B",
+            "provider": "Meta",
+            "type": "LLM",
+            "category": [
+                "reasoning",
+                "coding",
+                "general-purpose"
+            ],
+            "contextWindow": 128000,
+            "strengths": [
+                "Largest open-source model available",
+                "Competes with GPT-4 class models",
+                "Excellent for fine-tuning",
+                "Strong multilingual support"
+            ],
+            "weaknesses": [
+                "Extremely resource-intensive",
+                "Not available on all providers",
+                "Slower than smaller variants"
+            ],
+            "useCases": [
+                "Enterprise-grade reasoning",
+                "Large-scale code generation",
+                "Advanced research",
+                "Multilingual applications"
+            ],
+            "notRecommendedFor": [
+                "Quick prototyping",
+                "Budget projects",
+                "Edge deployment"
+            ],
+            "performance": {
+                "speedTier": "heavy",
+                "latency": "3-8s",
+                "throughput": "Low"
+            },
+            "costTier": "moderate",
+            "idealFor": [
+                "enterprise",
+                "researchers"
+            ],
+            "pricing": {
+                "input": "$3/1M tokens",
+                "output": "$3/1M tokens",
+                "tier": "moderate",
+                "inputNum": 3,
+                "outputNum": 3
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": false,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 88.6,
+                "humaneval": 89.0,
+                "gsm8k": 96.8,
+                "hellaswag": 89.0,
+                "arc": 93.0,
+                "reasoning": 91,
+                "coding": 87,
+                "math": 94,
+                "language": 93,
+                "knowledge": 92
+            },
+            "apiEndpoint": "https://api.groq.com/openai/v1/chat/completions",
+            "releaseDate": "2024-07",
+            "description": "Meta's largest open-source model at 405 billion parameters. Rivals GPT-4 and Claude Opus in capability while remaining open-weight. The gold standard for open-source AI."
+        },
+        {
+            "id": "mixtral-8x7b",
+            "name": "Mixtral 8x7B",
+            "provider": "Mistral",
+            "type": "LLM",
+            "category": [
+                "general-purpose",
+                "cost-efficient",
+                "multilingual"
+            ],
+            "contextWindow": 32768,
+            "strengths": [
+                "Mixture-of-Experts architecture (efficient)",
+                "Strong multilingual support",
+                "Free on Groq",
+                "Good balance of speed and quality",
+                "Apache 2.0 license"
+            ],
+            "weaknesses": [
+                "Smaller context than newer models",
+                "Weaker reasoning than 70B+ models",
+                "Dated compared to newer releases"
+            ],
+            "useCases": [
+                "Multilingual chatbots",
+                "Translation",
+                "General Q&A",
+                "Content generation",
+                "Text classification"
+            ],
+            "notRecommendedFor": [
+                "Long-context tasks",
+                "Advanced reasoning",
+                "Vision tasks"
+            ],
+            "performance": {
+                "speedTier": "fast",
+                "latency": "1-2s",
+                "throughput": "High"
+            },
+            "costTier": "free-on-groq",
+            "idealFor": [
+                "developers",
+                "startups",
+                "students"
+            ],
+            "pricing": {
+                "input": "Free (Groq)",
+                "output": "Free (Groq)",
+                "tier": "free",
+                "inputNum": 0,
+                "outputNum": 0
+            },
+            "capabilities": {
+                "toolCalling": false,
+                "streaming": true,
+                "vision": false,
+                "functionCalling": false,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 70.6,
+                "humaneval": 59.7,
+                "gsm8k": 74.4,
+                "hellaswag": 82.0,
+                "arc": 72.0,
+                "reasoning": 72,
+                "coding": 62,
+                "math": 70,
+                "language": 85,
+                "knowledge": 75
+            },
+            "apiEndpoint": "https://api.groq.com/openai/v1/chat/completions",
+            "releaseDate": "2023-12",
+            "description": "Mistral's innovative Mixture-of-Experts model. Uses only 12.9B active parameters from its 46.7B total, making it efficient yet powerful. Free on Groq with good multilingual support."
+        },
+        {
+            "id": "mistral-large",
+            "name": "Mistral Large 2",
+            "provider": "Mistral",
+            "type": "LLM",
+            "category": [
+                "reasoning",
+                "coding",
+                "multilingual"
+            ],
+            "contextWindow": 128000,
+            "strengths": [
+                "Strong reasoning comparable to GPT-4",
+                "Excellent multilingual (incl. code)",
+                "128K context window",
+                "Competitive pricing",
+                "Good at structured outputs"
+            ],
+            "weaknesses": [
+                "Less tested community vs OpenAI/Anthropic",
+                "Smaller ecosystem",
+                "Vision capabilities limited"
+            ],
+            "useCases": [
+                "Enterprise multilingual applications",
+                "Code generation across languages",
+                "Complex analysis",
+                "Structured data extraction"
+            ],
+            "notRecommendedFor": [
+                "Vision-heavy tasks",
+                "Applications requiring largest communities"
+            ],
+            "performance": {
+                "speedTier": "balanced",
+                "latency": "2-4s",
+                "throughput": "Moderate"
+            },
+            "costTier": "moderate",
+            "idealFor": [
+                "enterprise",
+                "developers"
+            ],
+            "pricing": {
+                "input": "$2/1M tokens",
+                "output": "$6/1M tokens",
+                "tier": "moderate",
+                "inputNum": 2,
+                "outputNum": 6
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": false,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 84.0,
+                "humaneval": 84.0,
+                "gsm8k": 91.2,
+                "hellaswag": 84.0,
+                "arc": 88.0,
+                "reasoning": 87,
+                "coding": 84,
+                "math": 88,
+                "language": 92,
+                "knowledge": 86
+            },
+            "apiEndpoint": "https://api.mistral.ai/v1/chat/completions",
+            "releaseDate": "2024-07",
+            "description": "Mistral's flagship model competing directly with GPT-4 and Claude. Known for excellent multilingual performance and competitive pricing. A strong European AI alternative."
+        },
+        {
+            "id": "gemma2-9b",
+            "name": "Gemma 2 9B",
+            "provider": "Google",
+            "type": "LLM",
+            "category": [
+                "general-purpose",
+                "cost-efficient",
+                "edge"
+            ],
+            "contextWindow": 8192,
+            "strengths": [
+                "Very efficient for its size",
+                "Free on Groq",
+                "Can run on consumer hardware",
+                "Good instruction following",
+                "Open-weight (Google)"
+            ],
+            "weaknesses": [
+                "Small context window (8K)",
+                "Weaker than larger models",
+                "Limited to text only",
+                "Not ideal for complex tasks"
+            ],
+            "useCases": [
+                "Local AI assistants",
+                "Educational tools",
+                "Simple chatbots",
+                "Text classification",
+                "Edge deployment"
+            ],
+            "notRecommendedFor": [
+                "Long document analysis",
+                "Complex reasoning",
+                "Enterprise workloads"
+            ],
+            "performance": {
+                "speedTier": "fast",
+                "latency": "0.5-1s",
+                "throughput": "Very High"
+            },
+            "costTier": "free-on-groq",
+            "idealFor": [
+                "students",
+                "developers",
+                "hobbyists"
+            ],
+            "pricing": {
+                "input": "Free (Groq)",
+                "output": "Free (Groq)",
+                "tier": "free",
+                "inputNum": 0,
+                "outputNum": 0
+            },
+            "capabilities": {
+                "toolCalling": false,
+                "streaming": true,
+                "vision": false,
+                "functionCalling": false,
+                "jsonMode": false
+            },
+            "benchmarks": {
+                "mmlu": 65.4,
+                "humaneval": 54.0,
+                "gsm8k": 68.0,
+                "hellaswag": 73.0,
+                "arc": 68.0,
+                "reasoning": 64,
+                "coding": 55,
+                "math": 62,
+                "language": 72,
+                "knowledge": 68
+            },
+            "apiEndpoint": "https://api.groq.com/openai/v1/chat/completions",
+            "releaseDate": "2024-06",
+            "description": "Google's compact open-weight model optimized for efficiency. Runs well on consumer hardware and is free on Groq. Best for lightweight tasks and learning AI development."
+        },
+        {
+            "id": "deepseek-r1",
+            "name": "DeepSeek R1",
+            "provider": "DeepSeek",
+            "type": "Reasoning",
+            "category": [
+                "reasoning",
+                "math",
+                "coding",
+                "science"
+            ],
+            "contextWindow": 128000,
+            "strengths": [
+                "Exceptional reasoning (rivals o1)",
+                "Open-source model",
+                "Very competitive pricing",
+                "Strong math and coding",
+                "Chain-of-thought built-in"
+            ],
+            "weaknesses": [
+                "Longer response times due to thinking",
+                "Chinese company (data sovereignty concerns)",
+                "Newer with less ecosystem support"
+            ],
+            "useCases": [
+                "Advanced mathematics",
+                "Scientific research",
+                "Complex coding problems",
+                "Logical reasoning tasks",
+                "Academic work"
+            ],
+            "notRecommendedFor": [
+                "Quick simple queries",
+                "Real-time applications",
+                "Enterprise with strict data policies"
+            ],
+            "performance": {
+                "speedTier": "heavy",
+                "latency": "5-30s",
+                "throughput": "Low"
+            },
+            "costTier": "cheap",
+            "idealFor": [
+                "researchers",
+                "students",
+                "developers"
+            ],
+            "pricing": {
+                "input": "$0.55/1M tokens",
+                "output": "$2.19/1M tokens",
+                "tier": "budget",
+                "inputNum": 0.55,
+                "outputNum": 2.19
+            },
+            "capabilities": {
+                "toolCalling": false,
+                "streaming": true,
+                "vision": false,
+                "functionCalling": false,
+                "jsonMode": false
+            },
+            "benchmarks": {
+                "mmlu": 90.8,
+                "humaneval": 92.4,
+                "gsm8k": 97.3,
+                "hellaswag": 88.0,
+                "arc": 95.0,
+                "reasoning": 97,
+                "coding": 92,
+                "math": 97,
+                "language": 86,
+                "knowledge": 90
+            },
+            "apiEndpoint": "https://api.deepseek.com/v1/chat/completions",
+            "releaseDate": "2025-01",
+            "description": "DeepSeek's groundbreaking reasoning model that rivals OpenAI's o1 at a fraction of the cost. Its open-source nature has disrupted the AI landscape, democratizing access to advanced reasoning."
+        },
+        {
+            "id": "deepseek-v3",
+            "name": "DeepSeek V3",
+            "provider": "DeepSeek",
+            "type": "LLM",
+            "category": [
+                "general-purpose",
+                "coding",
+                "reasoning"
+            ],
+            "contextWindow": 128000,
+            "strengths": [
+                "Mixture-of-Experts (671B total, 37B active)",
+                "Extremely cost-effective",
+                "Strong across all benchmarks",
+                "Open-source",
+                "128K context"
+            ],
+            "weaknesses": [
+                "Data sovereignty concerns for some enterprises",
+                "Newer ecosystem",
+                "Can be verbose"
+            ],
+            "useCases": [
+                "General AI assistant",
+                "Code generation",
+                "Content creation",
+                "Data analysis",
+                "Research"
+            ],
+            "notRecommendedFor": [
+                "Enterprise with strict data residency requirements",
+                "Tasks requiring established ecosystems"
+            ],
+            "performance": {
+                "speedTier": "fast",
+                "latency": "1-3s",
+                "throughput": "High"
+            },
+            "costTier": "cheap",
+            "idealFor": [
+                "developers",
+                "startups",
+                "students"
+            ],
+            "pricing": {
+                "input": "$0.27/1M tokens",
+                "output": "$1.10/1M tokens",
+                "tier": "budget",
+                "inputNum": 0.27,
+                "outputNum": 1.10
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": false,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 87.1,
+                "humaneval": 86.0,
+                "gsm8k": 93.0,
+                "hellaswag": 87.5,
+                "arc": 90.0,
+                "reasoning": 88,
+                "coding": 85,
+                "math": 90,
+                "language": 89,
+                "knowledge": 88
+            },
+            "apiEndpoint": "https://api.deepseek.com/v1/chat/completions",
+            "releaseDate": "2024-12",
+            "description": "DeepSeek's flagship general-purpose model using an efficient MoE architecture. Delivers GPT-4 class performance at a revolutionary price point, making it one of the most cost-effective models available."
+        },
+        {
+            "id": "qwen-2-5-72b",
+            "name": "Qwen 2.5 72B",
+            "provider": "Alibaba",
+            "type": "LLM",
+            "category": [
+                "general-purpose",
+                "coding",
+                "multilingual"
+            ],
+            "contextWindow": 131072,
+            "strengths": [
+                "Excellent multilingual support (especially CJK)",
+                "Strong coding capabilities",
+                "Open-weight model",
+                "131K context window",
+                "Good math performance"
+            ],
+            "weaknesses": [
+                "Less known in Western markets",
+                "Smaller English-focused community",
+                "Data governance concerns"
+            ],
+            "useCases": [
+                "Multilingual applications",
+                "Code generation",
+                "CJK language tasks",
+                "Content creation",
+                "Research"
+            ],
+            "notRecommendedFor": [
+                "Enterprise with strict Western-only data policies"
+            ],
+            "performance": {
+                "speedTier": "balanced",
+                "latency": "2-4s",
+                "throughput": "Moderate"
+            },
+            "costTier": "cheap",
+            "idealFor": [
+                "developers",
+                "researchers",
+                "startups"
+            ],
+            "pricing": {
+                "input": "$0.30/1M tokens",
+                "output": "$0.30/1M tokens",
+                "tier": "budget",
+                "inputNum": 0.30,
+                "outputNum": 0.30
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": false,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 85.3,
+                "humaneval": 86.0,
+                "gsm8k": 91.6,
+                "hellaswag": 85.0,
+                "arc": 87.5,
+                "reasoning": 84,
+                "coding": 83,
+                "math": 88,
+                "language": 91,
+                "knowledge": 86
+            },
+            "apiEndpoint": "https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation",
+            "releaseDate": "2024-09",
+            "description": "Alibaba's flagship open-weight model with exceptional multilingual capabilities, especially for Chinese, Japanese, and Korean. A strong open-source contender with highly competitive pricing."
+        },
+        {
+            "id": "codestral",
+            "name": "Codestral",
+            "provider": "Mistral",
+            "type": "Code",
+            "category": [
+                "coding",
+                "fill-in-the-middle"
+            ],
+            "contextWindow": 32768,
+            "strengths": [
+                "Purpose-built for code generation",
+                "Supports 80+ programming languages",
+                "Fill-in-the-middle (FIM) support",
+                "Optimized IDE integration",
+                "Fast inference"
+            ],
+            "weaknesses": [
+                "Limited to code-related tasks",
+                "32K context window",
+                "Non-production license for some use cases"
+            ],
+            "useCases": [
+                "IDE code completion",
+                "Code generation",
+                "Code review",
+                "Refactoring",
+                "Unit test generation"
+            ],
+            "notRecommendedFor": [
+                "General conversation",
+                "Creative writing",
+                "Non-coding tasks"
+            ],
+            "performance": {
+                "speedTier": "fast",
+                "latency": "0.5-1.5s",
+                "throughput": "Very High"
+            },
+            "costTier": "moderate",
+            "idealFor": [
+                "developers",
+                "startups"
+            ],
+            "pricing": {
+                "input": "$1/1M tokens",
+                "output": "$3/1M tokens",
+                "tier": "moderate",
+                "inputNum": 1,
+                "outputNum": 3
+            },
+            "capabilities": {
+                "toolCalling": false,
+                "streaming": true,
+                "vision": false,
+                "functionCalling": false,
+                "jsonMode": false
+            },
+            "benchmarks": {
+                "mmlu": 60.0,
+                "humaneval": 91.0,
+                "gsm8k": 65.0,
+                "hellaswag": 60.0,
+                "arc": 58.0,
+                "reasoning": 55,
+                "coding": 95,
+                "math": 60,
+                "language": 50,
+                "knowledge": 55
+            },
+            "apiEndpoint": "https://codestral.mistral.ai/v1/chat/completions",
+            "releaseDate": "2024-05",
+            "description": "Mistral's specialized code model supporting 80+ programming languages. Features Fill-in-the-Middle for IDE integration, making it ideal for code completion, generation, and refactoring."
+        },
+        {
+            "id": "phi-3-medium",
+            "name": "Phi-3 Medium 14B",
+            "provider": "Microsoft",
+            "type": "LLM",
+            "category": [
+                "reasoning",
+                "cost-efficient",
+                "edge"
+            ],
+            "contextWindow": 128000,
+            "strengths": [
+                "Exceptional quality-to-size ratio",
+                "Runs on consumer hardware",
+                "128K context window",
+                "Strong reasoning for its size",
+                "MIT license"
+            ],
+            "weaknesses": [
+                "Less capable than 70B+ models",
+                "Limited creative writing",
+                "No vision support"
+            ],
+            "useCases": [
+                "On-device AI",
+                "Edge deployment",
+                "Offline applications",
+                "Educational tools",
+                "Simple reasoning"
+            ],
+            "notRecommendedFor": [
+                "Enterprise-grade needs",
+                "Advanced creative tasks",
+                "Production-critical applications"
+            ],
+            "performance": {
+                "speedTier": "fast",
+                "latency": "0.5-1.5s",
+                "throughput": "High"
+            },
+            "costTier": "free",
+            "idealFor": [
+                "students",
+                "hobbyists",
+                "developers"
+            ],
+            "pricing": {
+                "input": "Free (self-host)",
+                "output": "Free (self-host)",
+                "tier": "free",
+                "inputNum": 0,
+                "outputNum": 0
+            },
+            "capabilities": {
+                "toolCalling": false,
+                "streaming": true,
+                "vision": false,
+                "functionCalling": false,
+                "jsonMode": false
+            },
+            "benchmarks": {
+                "mmlu": 78.0,
+                "humaneval": 60.0,
+                "gsm8k": 84.0,
+                "hellaswag": 80.0,
+                "arc": 78.0,
+                "reasoning": 76,
+                "coding": 62,
+                "math": 80,
+                "language": 78,
+                "knowledge": 75
+            },
+            "apiEndpoint": "Self-hosted",
+            "releaseDate": "2024-05",
+            "description": "Microsoft's compact-but-powerful model that punches well above its weight class. Designed for edge computing and on-device deployment. MIT licensed for maximum flexibility."
+        },
+        {
+            "id": "claude-3-sonnet",
+            "name": "Claude 3 Sonnet",
+            "provider": "Anthropic",
+            "type": "LLM",
+            "category": [
+                "general-purpose",
+                "reasoning"
+            ],
+            "contextWindow": 200000,
+            "strengths": [
+                "Good balance of speed and quality",
+                "200K context",
+                "Reliable for production"
+            ],
+            "weaknesses": [
+                "Superseded by 3.5 Sonnet",
+                "Less capable at code"
+            ],
+            "useCases": [
+                "General AI assistant",
+                "Content summarization",
+                "Data extraction"
+            ],
+            "notRecommendedFor": [
+                "Heavy coding tasks",
+                "Where 3.5 Sonnet is available"
+            ],
+            "performance": {
+                "speedTier": "balanced",
+                "latency": "1-3s",
+                "throughput": "High"
+            },
+            "costTier": "moderate",
+            "idealFor": [
+                "developers",
+                "enterprise"
+            ],
+            "pricing": {
+                "input": "$3/1M tokens",
+                "output": "$15/1M tokens",
+                "tier": "moderate",
+                "inputNum": 3,
+                "outputNum": 15
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": true,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 79.0,
+                "humaneval": 72.5,
+                "gsm8k": 83.0,
+                "hellaswag": 82.0,
+                "arc": 83.0,
+                "reasoning": 80,
+                "coding": 74,
+                "math": 80,
+                "language": 85,
+                "knowledge": 82
+            },
+            "apiEndpoint": "https://api.anthropic.com/v1/messages",
+            "releaseDate": "2024-03",
+            "description": "Anthropic's balanced mid-tier model offering good performance at reasonable cost. Suitable for production workloads that don't require the cutting-edge capabilities of Claude 3.5 Sonnet."
+        },
+        {
+            "id": "claude-3-haiku",
+            "name": "Claude 3 Haiku",
+            "provider": "Anthropic",
+            "type": "LLM",
+            "category": [
+                "general-purpose",
+                "cost-efficient"
+            ],
+            "contextWindow": 200000,
+            "strengths": [
+                "Very fast response times",
+                "Budget-friendly",
+                "200K context",
+                "Good for simple tasks"
+            ],
+            "weaknesses": [
+                "Weakest in Claude 3 family",
+                "Limited reasoning depth"
+            ],
+            "useCases": [
+                "Quick chatbots",
+                "Content moderation",
+                "Simple classification"
+            ],
+            "notRecommendedFor": [
+                "Complex analysis",
+                "Advanced coding"
+            ],
+            "performance": {
+                "speedTier": "fast",
+                "latency": "0.3-0.8s",
+                "throughput": "Very High"
+            },
+            "costTier": "cheap",
+            "idealFor": [
+                "students",
+                "startups"
+            ],
+            "pricing": {
+                "input": "$0.25/1M tokens",
+                "output": "$1.25/1M tokens",
+                "tier": "budget",
+                "inputNum": 0.25,
+                "outputNum": 1.25
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": true,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 73.8,
+                "humaneval": 70.0,
+                "gsm8k": 78.0,
+                "hellaswag": 77.0,
+                "arc": 76.0,
+                "reasoning": 72,
+                "coding": 70,
+                "math": 74,
+                "language": 80,
+                "knowledge": 75
+            },
+            "apiEndpoint": "https://api.anthropic.com/v1/messages",
+            "releaseDate": "2024-03",
+            "description": "Anthropic's fastest and most affordable model. Ideal for high-throughput applications like chatbots and content moderation where speed matters more than deep reasoning."
+        },
+        {
+            "id": "o1-mini",
+            "name": "o1-mini",
+            "provider": "OpenAI",
+            "type": "Reasoning",
+            "category": [
+                "reasoning",
+                "math",
+                "coding"
+            ],
+            "contextWindow": 128000,
+            "strengths": [
+                "Strong reasoning at lower cost than o1",
+                "Fast for a reasoning model",
+                "Good at math and code"
+            ],
+            "weaknesses": [
+                "No vision support",
+                "No streaming",
+                "Weaker general knowledge than o1"
+            ],
+            "useCases": [
+                "Math homework help",
+                "Code debugging",
+                "Logic puzzles",
+                "STEM tutoring"
+            ],
+            "notRecommendedFor": [
+                "Vision tasks",
+                "General conversation",
+                "Creative writing"
+            ],
+            "performance": {
+                "speedTier": "balanced",
+                "latency": "3-15s",
+                "throughput": "Moderate"
+            },
+            "costTier": "moderate",
+            "idealFor": [
+                "students",
+                "developers"
+            ],
+            "pricing": {
+                "input": "$3/1M tokens",
+                "output": "$12/1M tokens",
+                "tier": "moderate",
+                "inputNum": 3,
+                "outputNum": 12
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": false,
+                "vision": false,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 85.2,
+                "humaneval": 90.0,
+                "gsm8k": 94.0,
+                "hellaswag": 85.0,
+                "arc": 90.0,
+                "reasoning": 92,
+                "coding": 90,
+                "math": 95,
+                "language": 82,
+                "knowledge": 84
+            },
+            "apiEndpoint": "https://api.openai.com/v1/chat/completions",
+            "releaseDate": "2024-09",
+            "description": "OpenAI's cost-efficient reasoning model. Delivers strong math and coding performance at a fraction of o1's cost. Best for students and developers needing chain-of-thought without enterprise pricing."
+        },
+        {
+            "id": "gpt-3-5-turbo",
+            "name": "GPT-3.5 Turbo",
+            "provider": "OpenAI",
+            "type": "LLM",
+            "category": [
+                "general-purpose",
+                "cost-efficient",
+                "legacy"
+            ],
+            "contextWindow": 16385,
+            "strengths": [
+                "Extremely cost-effective",
+                "Very fast",
+                "Well-tested and stable",
+                "Huge ecosystem"
+            ],
+            "weaknesses": [
+                "Significantly weaker than GPT-4 class",
+                "16K context limit",
+                "Being deprecated"
+            ],
+            "useCases": [
+                "Simple chatbots",
+                "Text classification",
+                "Quick drafts",
+                "Legacy applications"
+            ],
+            "notRecommendedFor": [
+                "Complex reasoning",
+                "New projects",
+                "Production-critical AI"
+            ],
+            "performance": {
+                "speedTier": "fast",
+                "latency": "0.3-1s",
+                "throughput": "Very High"
+            },
+            "costTier": "cheap",
+            "idealFor": [
+                "students",
+                "hobbyists"
+            ],
+            "pricing": {
+                "input": "$0.50/1M tokens",
+                "output": "$1.50/1M tokens",
+                "tier": "budget",
+                "inputNum": 0.50,
+                "outputNum": 1.50
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": false,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 70.0,
+                "humaneval": 65.0,
+                "gsm8k": 57.1,
+                "hellaswag": 79.0,
+                "arc": 69.0,
+                "reasoning": 65,
+                "coding": 60,
+                "math": 55,
+                "language": 78,
+                "knowledge": 72
+            },
+            "apiEndpoint": "https://api.openai.com/v1/chat/completions",
+            "releaseDate": "2023-03",
+            "description": "OpenAI's legacy workhorse. Still widely used for simple tasks due to its low cost and fast speed, but being superseded by GPT-4o Mini which offers better quality at similar pricing."
+        },
+        {
+            "id": "gemini-1-5-flash",
+            "name": "Gemini 1.5 Flash",
+            "provider": "Google",
+            "type": "Multimodal",
+            "category": [
+                "general-purpose",
+                "cost-efficient",
+                "vision"
+            ],
+            "contextWindow": 1000000,
+            "strengths": [
+                "1M token context",
+                "Very fast inference",
+                "Free tier available",
+                "Multimodal support",
+                "Great value"
+            ],
+            "weaknesses": [
+                "Weaker reasoning than Pro",
+                "Less precise on complex tasks"
+            ],
+            "useCases": [
+                "Long document summarization",
+                "Quick multimodal tasks",
+                "High-volume processing",
+                "Video analysis"
+            ],
+            "notRecommendedFor": [
+                "Complex reasoning",
+                "Enterprise-critical apps"
+            ],
+            "performance": {
+                "speedTier": "fast",
+                "latency": "0.5-1.5s",
+                "throughput": "Very High"
+            },
+            "costTier": "cheap",
+            "idealFor": [
+                "students",
+                "developers",
+                "startups"
+            ],
+            "pricing": {
+                "input": "$0.075/1M tokens",
+                "output": "$0.30/1M tokens",
+                "tier": "budget",
+                "inputNum": 0.075,
+                "outputNum": 0.30
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": true,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 78.9,
+                "humaneval": 74.0,
+                "gsm8k": 82.0,
+                "hellaswag": 80.0,
+                "arc": 80.0,
+                "reasoning": 77,
+                "coding": 72,
+                "math": 78,
+                "language": 84,
+                "knowledge": 80
+            },
+            "apiEndpoint": "https://generativelanguage.googleapis.com/v1beta/models",
+            "releaseDate": "2024-05",
+            "description": "Google's speed-optimized model with the same 1M context window as the Pro model. Excellent for high-volume, cost-conscious applications that benefit from long-context capability."
+        },
+        {
+            "id": "gemma2-27b",
+            "name": "Gemma 2 27B",
+            "provider": "Google",
+            "type": "LLM",
+            "category": [
+                "reasoning",
+                "general-purpose"
+            ],
+            "contextWindow": 8192,
+            "strengths": [
+                "Strong performance for its size",
+                "Open-weight",
+                "Good reasoning",
+                "Self-hostable"
+            ],
+            "weaknesses": [
+                "8K context limit",
+                "No vision",
+                "Larger than 9B but smaller than 70B"
+            ],
+            "useCases": [
+                "Local AI development",
+                "Research",
+                "Moderate reasoning tasks",
+                "Fine-tuning base"
+            ],
+            "notRecommendedFor": [
+                "Long document tasks",
+                "Vision tasks",
+                "Enterprise scale"
+            ],
+            "performance": {
+                "speedTier": "balanced",
+                "latency": "1-2s",
+                "throughput": "High"
+            },
+            "costTier": "free",
+            "idealFor": [
+                "developers",
+                "researchers"
+            ],
+            "pricing": {
+                "input": "Free (self-host)",
+                "output": "Free (self-host)",
+                "tier": "free",
+                "inputNum": 0,
+                "outputNum": 0
+            },
+            "capabilities": {
+                "toolCalling": false,
+                "streaming": true,
+                "vision": false,
+                "functionCalling": false,
+                "jsonMode": false
+            },
+            "benchmarks": {
+                "mmlu": 75.2,
+                "humaneval": 64.0,
+                "gsm8k": 77.0,
+                "hellaswag": 80.5,
+                "arc": 78.0,
+                "reasoning": 74,
+                "coding": 65,
+                "math": 73,
+                "language": 80,
+                "knowledge": 77
+            },
+            "apiEndpoint": "Self-hosted",
+            "releaseDate": "2024-06",
+            "description": "Google's mid-size open-weight model. Offers significantly better performance than the 9B variant while still being practical for self-hosting on consumer GPUs."
+        },
+        {
+            "id": "llama-3-2-vision",
+            "name": "Llama 3.2 Vision 11B",
+            "provider": "Meta",
+            "type": "Multimodal",
+            "category": [
+                "vision",
+                "general-purpose"
+            ],
+            "contextWindow": 128000,
+            "strengths": [
+                "Open-source vision model",
+                "Image understanding",
+                "128K context",
+                "Free on supported providers"
+            ],
+            "weaknesses": [
+                "Smaller than 70B models",
+                "Vision capabilities not GPT-4V level"
+            ],
+            "useCases": [
+                "Image captioning",
+                "Visual Q&A",
+                "Document OCR",
+                "Diagram understanding"
+            ],
+            "notRecommendedFor": [
+                "Complex reasoning",
+                "Enterprise vision apps"
+            ],
+            "performance": {
+                "speedTier": "fast",
+                "latency": "1-2s",
+                "throughput": "High"
+            },
+            "costTier": "free",
+            "idealFor": [
+                "developers",
+                "students"
+            ],
+            "pricing": {
+                "input": "Free (self-host)",
+                "output": "Free (self-host)",
+                "tier": "free",
+                "inputNum": 0,
+                "outputNum": 0
+            },
+            "capabilities": {
+                "toolCalling": false,
+                "streaming": true,
+                "vision": true,
+                "functionCalling": false,
+                "jsonMode": false
+            },
+            "benchmarks": {
+                "mmlu": 73.0,
+                "humaneval": 68.0,
+                "gsm8k": 70.0,
+                "hellaswag": 76.0,
+                "arc": 73.0,
+                "reasoning": 70,
+                "coding": 65,
+                "math": 68,
+                "language": 78,
+                "knowledge": 74
+            },
+            "apiEndpoint": "https://api.groq.com/openai/v1/chat/completions",
+            "releaseDate": "2024-09",
+            "description": "Meta's first open-source multimodal model. Brings vision capabilities to the Llama ecosystem, enabling image understanding tasks without requiring proprietary APIs."
+        },
+        {
+            "id": "mistral-small",
+            "name": "Mistral Small",
+            "provider": "Mistral",
+            "type": "LLM",
+            "category": [
+                "general-purpose",
+                "cost-efficient"
+            ],
+            "contextWindow": 32768,
+            "strengths": [
+                "Fast and efficient",
+                "Good multilingual",
+                "Cost-effective",
+                "32K context"
+            ],
+            "weaknesses": [
+                "Weaker than Large",
+                "32K context limit"
+            ],
+            "useCases": [
+                "Chatbots",
+                "Translation",
+                "Simple Q&A",
+                "Content generation"
+            ],
+            "notRecommendedFor": [
+                "Complex reasoning",
+                "Long documents"
+            ],
+            "performance": {
+                "speedTier": "fast",
+                "latency": "0.5-1.5s",
+                "throughput": "Very High"
+            },
+            "costTier": "cheap",
+            "idealFor": [
+                "startups",
+                "developers"
+            ],
+            "pricing": {
+                "input": "$0.20/1M tokens",
+                "output": "$0.60/1M tokens",
+                "tier": "budget",
+                "inputNum": 0.20,
+                "outputNum": 0.60
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": false,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 72.0,
+                "humaneval": 68.0,
+                "gsm8k": 74.0,
+                "hellaswag": 78.0,
+                "arc": 73.0,
+                "reasoning": 70,
+                "coding": 66,
+                "math": 71,
+                "language": 80,
+                "knowledge": 73
+            },
+            "apiEndpoint": "https://api.mistral.ai/v1/chat/completions",
+            "releaseDate": "2024-02",
+            "description": "Mistral's compact model for everyday tasks. Excellent multilingual support at budget pricing. A strong alternative to GPT-3.5 Turbo."
+        },
+        {
+            "id": "mistral-nemo",
+            "name": "Mistral NeMo 12B",
+            "provider": "Mistral",
+            "type": "LLM",
+            "category": [
+                "general-purpose",
+                "multilingual"
+            ],
+            "contextWindow": 128000,
+            "strengths": [
+                "128K context",
+                "Efficient 12B size",
+                "Strong multilingual",
+                "Co-developed with NVIDIA"
+            ],
+            "weaknesses": [
+                "Not as capable as large models",
+                "Newer with less adoption"
+            ],
+            "useCases": [
+                "Multilingual applications",
+                "Long document processing",
+                "Edge-friendly deployment"
+            ],
+            "notRecommendedFor": [
+                "Enterprise-critical tasks",
+                "Complex coding"
+            ],
+            "performance": {
+                "speedTier": "fast",
+                "latency": "0.5-1.5s",
+                "throughput": "Very High"
+            },
+            "costTier": "cheap",
+            "idealFor": [
+                "developers",
+                "startups"
+            ],
+            "pricing": {
+                "input": "$0.15/1M tokens",
+                "output": "$0.15/1M tokens",
+                "tier": "budget",
+                "inputNum": 0.15,
+                "outputNum": 0.15
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": false,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 68.0,
+                "humaneval": 62.0,
+                "gsm8k": 70.0,
+                "hellaswag": 76.0,
+                "arc": 70.0,
+                "reasoning": 68,
+                "coding": 62,
+                "math": 67,
+                "language": 78,
+                "knowledge": 70
+            },
+            "apiEndpoint": "https://api.mistral.ai/v1/chat/completions",
+            "releaseDate": "2024-07",
+            "description": "Joint development between Mistral and NVIDIA. A 12B model with a massive 128K context window, optimized for multilingual and long-document tasks."
+        },
+        {
+            "id": "deepseek-coder-v2",
+            "name": "DeepSeek Coder V2",
+            "provider": "DeepSeek",
+            "type": "Code",
+            "category": [
+                "coding",
+                "math"
+            ],
+            "contextWindow": 128000,
+            "strengths": [
+                "Purpose-built for code",
+                "Strong math abilities",
+                "Very cost-effective",
+                "Open-source"
+            ],
+            "weaknesses": [
+                "Limited general knowledge",
+                "Data sovereignty concerns"
+            ],
+            "useCases": [
+                "Code generation",
+                "Code review",
+                "Bug fixing",
+                "Algorithm design"
+            ],
+            "notRecommendedFor": [
+                "General conversation",
+                "Creative writing"
+            ],
+            "performance": {
+                "speedTier": "fast",
+                "latency": "1-2s",
+                "throughput": "High"
+            },
+            "costTier": "cheap",
+            "idealFor": [
+                "developers"
+            ],
+            "pricing": {
+                "input": "$0.14/1M tokens",
+                "output": "$0.28/1M tokens",
+                "tier": "budget",
+                "inputNum": 0.14,
+                "outputNum": 0.28
+            },
+            "capabilities": {
+                "toolCalling": false,
+                "streaming": true,
+                "vision": false,
+                "functionCalling": false,
+                "jsonMode": false
+            },
+            "benchmarks": {
+                "mmlu": 79.2,
+                "humaneval": 90.0,
+                "gsm8k": 90.0,
+                "hellaswag": 80.0,
+                "arc": 82.0,
+                "reasoning": 78,
+                "coding": 93,
+                "math": 90,
+                "language": 72,
+                "knowledge": 76
+            },
+            "apiEndpoint": "https://api.deepseek.com/v1/chat/completions",
+            "releaseDate": "2024-06",
+            "description": "DeepSeek's specialized coding model offering near state-of-the-art code generation at extremely competitive pricing. Excels at algorithmic challenges and code review."
+        },
+        {
+            "id": "yi-lightning",
+            "name": "Yi-Lightning",
+            "provider": "01.AI",
+            "type": "LLM",
+            "category": [
+                "general-purpose",
+                "reasoning",
+                "multilingual"
+            ],
+            "contextWindow": 16384,
+            "strengths": [
+                "Strong Chinese-English bilingual",
+                "Very fast inference",
+                "Competitive benchmarks",
+                "Cost-effective"
+            ],
+            "weaknesses": [
+                "16K context limit",
+                "Less known in Western markets",
+                "Limited ecosystem"
+            ],
+            "useCases": [
+                "Bilingual applications",
+                "Chinese NLP",
+                "General AI tasks",
+                "Translation"
+            ],
+            "notRecommendedFor": [
+                "Long-context tasks",
+                "Enterprise with Western-only policies"
+            ],
+            "performance": {
+                "speedTier": "fast",
+                "latency": "0.5-1.5s",
+                "throughput": "Very High"
+            },
+            "costTier": "cheap",
+            "idealFor": [
+                "developers",
+                "researchers"
+            ],
+            "pricing": {
+                "input": "$0.14/1M tokens",
+                "output": "$0.14/1M tokens",
+                "tier": "budget",
+                "inputNum": 0.14,
+                "outputNum": 0.14
+            },
+            "capabilities": {
+                "toolCalling": false,
+                "streaming": true,
+                "vision": false,
+                "functionCalling": false,
+                "jsonMode": false
+            },
+            "benchmarks": {
+                "mmlu": 82.0,
+                "humaneval": 77.0,
+                "gsm8k": 85.0,
+                "hellaswag": 82.0,
+                "arc": 82.0,
+                "reasoning": 80,
+                "coding": 75,
+                "math": 82,
+                "language": 88,
+                "knowledge": 80
+            },
+            "apiEndpoint": "https://api.01.ai/v1/chat/completions",
+            "releaseDate": "2024-10",
+            "description": "01.AI's flagship model by Kai-Fu Lee. Excels at Chinese-English bilingual tasks and offers strong performance across standard benchmarks at a very competitive price point."
+        },
+        {
+            "id": "grok-2",
+            "name": "Grok-2",
+            "provider": "xAI",
+            "type": "LLM",
+            "category": [
+                "general-purpose",
+                "reasoning",
+                "creative"
+            ],
+            "contextWindow": 131072,
+            "strengths": [
+                "Strong reasoning capabilities",
+                "Real-time X/Twitter data access",
+                "Witty and creative responses",
+                "131K context"
+            ],
+            "weaknesses": [
+                "Limited API availability",
+                "Newer ecosystem",
+                "X platform dependency"
+            ],
+            "useCases": [
+                "Real-time news analysis",
+                "Creative writing",
+                "Social media insights",
+                "General reasoning"
+            ],
+            "notRecommendedFor": [
+                "Privacy-sensitive apps",
+                "Enterprise with policy restrictions"
+            ],
+            "performance": {
+                "speedTier": "balanced",
+                "latency": "1-3s",
+                "throughput": "High"
+            },
+            "costTier": "moderate",
+            "idealFor": [
+                "developers",
+                "researchers"
+            ],
+            "pricing": {
+                "input": "$2/1M tokens",
+                "output": "$10/1M tokens",
+                "tier": "moderate",
+                "inputNum": 2,
+                "outputNum": 10
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": true,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 87.5,
+                "humaneval": 84.0,
+                "gsm8k": 92.0,
+                "hellaswag": 87.0,
+                "arc": 90.0,
+                "reasoning": 88,
+                "coding": 82,
+                "math": 90,
+                "language": 90,
+                "knowledge": 89
+            },
+            "apiEndpoint": "https://api.x.ai/v1/chat/completions",
+            "releaseDate": "2024-08",
+            "description": "Elon Musk's xAI flagship model. Known for its witty personality and access to real-time X/Twitter data. Competes well with GPT-4o on standard benchmarks."
+        },
+        {
+            "id": "command-r-plus",
+            "name": "Command R+",
+            "provider": "Cohere",
+            "type": "LLM",
+            "category": [
+                "reasoning",
+                "rag",
+                "enterprise"
+            ],
+            "contextWindow": 128000,
+            "strengths": [
+                "Best-in-class RAG performance",
+                "128K context",
+                "Strong citation generation",
+                "Enterprise-focused"
+            ],
+            "weaknesses": [
+                "Less general-purpose",
+                "Smaller community",
+                "Higher cost"
+            ],
+            "useCases": [
+                "RAG applications",
+                "Enterprise search",
+                "Document Q&A",
+                "Knowledge bases"
+            ],
+            "notRecommendedFor": [
+                "Simple chatbots",
+                "Creative writing",
+                "Cost-sensitive projects"
+            ],
+            "performance": {
+                "speedTier": "balanced",
+                "latency": "2-4s",
+                "throughput": "Moderate"
+            },
+            "costTier": "moderate",
+            "idealFor": [
+                "enterprise",
+                "developers"
+            ],
+            "pricing": {
+                "input": "$2.50/1M tokens",
+                "output": "$10/1M tokens",
+                "tier": "moderate",
+                "inputNum": 2.50,
+                "outputNum": 10
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": false,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 75.7,
+                "humaneval": 70.0,
+                "gsm8k": 78.0,
+                "hellaswag": 77.0,
+                "arc": 76.0,
+                "reasoning": 78,
+                "coding": 68,
+                "math": 74,
+                "language": 82,
+                "knowledge": 80
+            },
+            "apiEndpoint": "https://api.cohere.ai/v1/chat",
+            "releaseDate": "2024-04",
+            "description": "Cohere's enterprise-focused model optimized for RAG (Retrieval-Augmented Generation). Best-in-class at grounding responses in provided documents with accurate citations."
+        },
+        {
+            "id": "qwen-2-5-coder",
+            "name": "Qwen 2.5 Coder 32B",
+            "provider": "Alibaba",
+            "type": "Code",
+            "category": [
+                "coding",
+                "math"
+            ],
+            "contextWindow": 131072,
+            "strengths": [
+                "Top-tier code generation",
+                "131K context",
+                "Strong math",
+                "Open-weight",
+                "Matches GPT-4o on code"
+            ],
+            "weaknesses": [
+                "Specialized (less general)",
+                "Newer model"
+            ],
+            "useCases": [
+                "Code generation",
+                "Code review",
+                "Algorithm challenges",
+                "Full-stack development"
+            ],
+            "notRecommendedFor": [
+                "General conversation",
+                "Creative writing"
+            ],
+            "performance": {
+                "speedTier": "balanced",
+                "latency": "1-3s",
+                "throughput": "High"
+            },
+            "costTier": "cheap",
+            "idealFor": [
+                "developers"
+            ],
+            "pricing": {
+                "input": "$0.20/1M tokens",
+                "output": "$0.20/1M tokens",
+                "tier": "budget",
+                "inputNum": 0.20,
+                "outputNum": 0.20
+            },
+            "capabilities": {
+                "toolCalling": false,
+                "streaming": true,
+                "vision": false,
+                "functionCalling": false,
+                "jsonMode": false
+            },
+            "benchmarks": {
+                "mmlu": 74.0,
+                "humaneval": 92.0,
+                "gsm8k": 85.0,
+                "hellaswag": 78.0,
+                "arc": 76.0,
+                "reasoning": 72,
+                "coding": 96,
+                "math": 84,
+                "language": 70,
+                "knowledge": 72
+            },
+            "apiEndpoint": "https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation",
+            "releaseDate": "2024-11",
+            "description": "Alibaba's specialized coding model that rivals the best closed-source code models. Matches GPT-4o on HumanEval while being open-weight and extremely cost-effective."
+        },
+        {
+            "id": "qwq-32b",
+            "name": "QwQ 32B",
+            "provider": "Alibaba",
+            "type": "Reasoning",
+            "category": [
+                "reasoning",
+                "math",
+                "science"
+            ],
+            "contextWindow": 32768,
+            "strengths": [
+                "Chain-of-thought reasoning",
+                "Strong math",
+                "Open-source reasoning model",
+                "Competitive with o1-mini"
+            ],
+            "weaknesses": [
+                "32K context limit",
+                "Longer response times",
+                "Verbose reasoning chains"
+            ],
+            "useCases": [
+                "Mathematical proofs",
+                "Scientific reasoning",
+                "Logic puzzles",
+                "Academic research"
+            ],
+            "notRecommendedFor": [
+                "Simple queries",
+                "Real-time apps",
+                "Long documents"
+            ],
+            "performance": {
+                "speedTier": "heavy",
+                "latency": "5-20s",
+                "throughput": "Low"
+            },
+            "costTier": "cheap",
+            "idealFor": [
+                "researchers",
+                "students"
+            ],
+            "pricing": {
+                "input": "$0.30/1M tokens",
+                "output": "$0.30/1M tokens",
+                "tier": "budget",
+                "inputNum": 0.30,
+                "outputNum": 0.30
+            },
+            "capabilities": {
+                "toolCalling": false,
+                "streaming": true,
+                "vision": false,
+                "functionCalling": false,
+                "jsonMode": false
+            },
+            "benchmarks": {
+                "mmlu": 85.0,
+                "humaneval": 85.0,
+                "gsm8k": 95.0,
+                "hellaswag": 83.0,
+                "arc": 90.0,
+                "reasoning": 93,
+                "coding": 84,
+                "math": 95,
+                "language": 80,
+                "knowledge": 83
+            },
+            "apiEndpoint": "https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation",
+            "releaseDate": "2024-12",
+            "description": "Alibaba's open-source reasoning model inspired by OpenAI's o1. Uses internal chain-of-thought to solve complex mathematical and logical problems at a fraction of o1's cost."
+        },
+        {
+            "id": "gpt-5",
+            "name": "GPT-5",
+            "provider": "OpenAI",
+            "type": "Reasoning",
+            "category": [
+                "reasoning",
+                "general-purpose",
+                "coding",
+                "research"
+            ],
+            "contextWindow": 1000000,
+            "strengths": [
+                "1M token context window",
+                "Frontier-class reasoning",
+                "Native tool orchestration",
+                "Real-time web browsing",
+                "Deep research capabilities"
+            ],
+            "weaknesses": [
+                "Very expensive at scale",
+                "Closed-source",
+                "High latency for complex reasoning",
+                "Rate-limited on launch"
+            ],
+            "useCases": [
+                "Scientific research",
+                "Enterprise strategy",
+                "Complex multi-step analysis",
+                "Advanced coding",
+                "Document-scale reasoning"
+            ],
+            "notRecommendedFor": [
+                "Simple chatbots",
+                "High-throughput batch processing",
+                "Budget applications"
+            ],
+            "performance": {
+                "speedTier": "moderate",
+                "latency": "3-8s",
+                "throughput": "Medium"
+            },
+            "costTier": "very-expensive",
+            "idealFor": [
+                "enterprise",
+                "researchers",
+                "developers"
+            ],
+            "pricing": {
+                "input": "$10/1M tokens",
+                "output": "$30/1M tokens",
+                "tier": "enterprise",
+                "inputNum": 10,
+                "outputNum": 30
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": true,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 93.5,
+                "humaneval": 94.0,
+                "gsm8k": 97.5,
+                "hellaswag": 93.0,
+                "arc": 96.0,
+                "reasoning": 96,
+                "coding": 93,
+                "math": 97,
+                "language": 96,
+                "knowledge": 95
+            },
+            "apiEndpoint": "https://api.openai.com/v1/chat/completions",
+            "releaseDate": "2025-06",
+            "description": "OpenAI's most capable model. Features a 1M token context window, frontier-level reasoning, native tool orchestration, and deep research capabilities. Represents a generational leap in AI capability.",
+            "architecture": "Transformer (undisclosed scale)",
+            "parameterCount": "Undisclosed (rumored 1T+ MoE)",
+            "knowledgeCutoff": "April 2025",
+            "trainingData": "Proprietary multimodal dataset",
+            "maxOutput": 32768,
+            "license": "Proprietary"
+        },
+        {
+            "id": "claude-opus-4",
+            "name": "Claude Opus 4",
+            "provider": "Anthropic",
+            "type": "Reasoning",
+            "category": [
+                "reasoning",
+                "coding",
+                "research",
+                "agentic"
+            ],
+            "contextWindow": 200000,
+            "strengths": [
+                "Best-in-class coding ability",
+                "Superior agentic capabilities",
+                "Sustained focus on long tasks",
+                "Constitutional AI safety",
+                "Parallel tool use"
+            ],
+            "weaknesses": [
+                "Expensive",
+                "Slower than smaller Claude models",
+                "200K context (vs competitors' 1M+)",
+                "Closed-source"
+            ],
+            "useCases": [
+                "Complex software engineering",
+                "Multi-step agentic workflows",
+                "Research analysis",
+                "Strategic planning",
+                "Code refactoring"
+            ],
+            "notRecommendedFor": [
+                "Simple chat applications",
+                "High-volume batch processing",
+                "Cost-sensitive projects"
+            ],
+            "performance": {
+                "speedTier": "moderate",
+                "latency": "3-6s",
+                "throughput": "Medium"
+            },
+            "costTier": "very-expensive",
+            "idealFor": [
+                "enterprise",
+                "developers",
+                "researchers"
+            ],
+            "pricing": {
+                "input": "$15/1M tokens",
+                "output": "$75/1M tokens",
+                "tier": "enterprise",
+                "inputNum": 15,
+                "outputNum": 75
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": true,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 91.0,
+                "humaneval": 95.0,
+                "gsm8k": 96.0,
+                "reasoning": 95,
+                "coding": 96,
+                "math": 95,
+                "language": 94,
+                "knowledge": 93
+            },
+            "apiEndpoint": "https://api.anthropic.com/v1/messages",
+            "releaseDate": "2025-05",
+            "description": "Anthropic's most powerful model. Excels at sustained, complex coding tasks and agentic workflows that can run for hours. The first model to surpass humans on SWE-bench Verified.",
+            "architecture": "Transformer",
+            "parameterCount": "Undisclosed",
+            "knowledgeCutoff": "March 2025",
+            "trainingData": "Proprietary with RLHF + Constitutional AI",
+            "maxOutput": 32000,
+            "license": "Proprietary"
+        },
+        {
+            "id": "claude-sonnet-4",
+            "name": "Claude Sonnet 4",
+            "provider": "Anthropic",
+            "type": "LLM",
+            "category": [
+                "coding",
+                "general-purpose",
+                "reasoning"
+            ],
+            "contextWindow": 200000,
+            "strengths": [
+                "Excellent cost-performance ratio",
+                "Strong coding ability",
+                "Fast response times",
+                "Reduced sycophancy",
+                "Transparent reasoning"
+            ],
+            "weaknesses": [
+                "Not as powerful as Opus 4 for deep research",
+                "200K context limit",
+                "Closed-source"
+            ],
+            "useCases": [
+                "Daily coding assistant",
+                "Content generation",
+                "Customer support",
+                "Data analysis",
+                "API integration"
+            ],
+            "notRecommendedFor": [
+                "Most complex research tasks",
+                "Ultra-low cost applications"
+            ],
+            "performance": {
+                "speedTier": "fast",
+                "latency": "1-3s",
+                "throughput": "High"
+            },
+            "costTier": "expensive",
+            "idealFor": [
+                "developers",
+                "startups",
+                "enterprise"
+            ],
+            "pricing": {
+                "input": "$3/1M tokens",
+                "output": "$15/1M tokens",
+                "tier": "premium",
+                "inputNum": 3,
+                "outputNum": 15
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": true,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 89.5,
+                "humaneval": 92.0,
+                "gsm8k": 95.0,
+                "reasoning": 93,
+                "coding": 93,
+                "math": 94,
+                "language": 92,
+                "knowledge": 91
+            },
+            "apiEndpoint": "https://api.anthropic.com/v1/messages",
+            "releaseDate": "2025-05",
+            "description": "The successor to Claude 3.5 Sonnet, offering improved coding, reduced sycophancy, and better instruction following. The go-to choice for production AI applications.",
+            "architecture": "Transformer",
+            "parameterCount": "Undisclosed",
+            "knowledgeCutoff": "March 2025",
+            "trainingData": "Proprietary with Constitutional AI",
+            "maxOutput": 16000,
+            "license": "Proprietary"
+        },
+        {
+            "id": "claude-haiku-4",
+            "name": "Claude Haiku 4.5",
+            "provider": "Anthropic",
+            "type": "LLM",
+            "category": [
+                "general-purpose",
+                "coding"
+            ],
+            "contextWindow": 200000,
+            "strengths": [
+                "Very fast responses",
+                "Low cost",
+                "Good coding ability for its size",
+                "200K context window",
+                "Great for high-volume use"
+            ],
+            "weaknesses": [
+                "Not as capable as Sonnet/Opus",
+                "Limited reasoning depth",
+                "Weaker on complex math"
+            ],
+            "useCases": [
+                "Fast chatbots",
+                "Content classification",
+                "Simple code generation",
+                "Real-time applications",
+                "Data extraction"
+            ],
+            "notRecommendedFor": [
+                "Deep research",
+                "Complex reasoning tasks",
+                "Large codebase refactoring"
+            ],
+            "performance": {
+                "speedTier": "ultra-fast",
+                "latency": "0.3-1s",
+                "throughput": "Very High"
+            },
+            "costTier": "cheap",
+            "idealFor": [
+                "startups",
+                "developers",
+                "students"
+            ],
+            "pricing": {
+                "input": "$0.80/1M tokens",
+                "output": "$4/1M tokens",
+                "tier": "budget",
+                "inputNum": 0.8,
+                "outputNum": 4
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": true,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 84.0,
+                "humaneval": 83.0,
+                "gsm8k": 88.0,
+                "reasoning": 82,
+                "coding": 83,
+                "math": 85,
+                "language": 86,
+                "knowledge": 84
+            },
+            "apiEndpoint": "https://api.anthropic.com/v1/messages",
+            "releaseDate": "2025-04",
+            "description": "Anthropic's fastest and most affordable model. Punches above its weight class on coding and general tasks while maintaining sub-second latency for production use.",
+            "architecture": "Transformer",
+            "parameterCount": "Undisclosed",
+            "knowledgeCutoff": "March 2025",
+            "trainingData": "Proprietary with Constitutional AI",
+            "maxOutput": 8192,
+            "license": "Proprietary"
+        },
+        {
+            "id": "gemini-2-5-flash",
+            "name": "Gemini 2.5 Flash",
+            "provider": "Google",
+            "type": "Reasoning",
+            "category": [
+                "reasoning",
+                "general-purpose",
+                "coding",
+                "vision"
+            ],
+            "contextWindow": 1048576,
+            "strengths": [
+                "1M token context",
+                "Built-in thinking/reasoning",
+                "Extremely fast",
+                "Very affordable",
+                "Multimodal (text, image, video, audio)"
+            ],
+            "weaknesses": [
+                "Reasoning can be verbose",
+                "Newer model with less community testing",
+                "Google-ecosystem dependent"
+            ],
+            "useCases": [
+                "Document analysis",
+                "Code generation with reasoning",
+                "Multimodal understanding",
+                "Agentic applications",
+                "Budget reasoning tasks"
+            ],
+            "notRecommendedFor": [
+                "Tasks needing maximum accuracy over speed",
+                "Non-Google cloud environments"
+            ],
+            "performance": {
+                "speedTier": "ultra-fast",
+                "latency": "0.5-2s",
+                "throughput": "Very High"
+            },
+            "costTier": "cheap",
+            "idealFor": [
+                "developers",
+                "startups",
+                "enterprise"
+            ],
+            "pricing": {
+                "input": "$0.15/1M tokens",
+                "output": "$0.60/1M tokens",
+                "tier": "budget",
+                "inputNum": 0.15,
+                "outputNum": 0.6
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": true,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 90.0,
+                "humaneval": 88.0,
+                "gsm8k": 95.5,
+                "reasoning": 91,
+                "coding": 88,
+                "math": 95,
+                "language": 91,
+                "knowledge": 89
+            },
+            "apiEndpoint": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash",
+            "releaseDate": "2025-04",
+            "description": "Google's hybrid thinking model. Combines reasoning capability with Flash-tier speed and cost. Features a 1M context window and native multimodal understanding at an incredibly low price point.",
+            "architecture": "Transformer MoE",
+            "parameterCount": "Undisclosed",
+            "knowledgeCutoff": "January 2025",
+            "trainingData": "Google proprietary multimodal data",
+            "maxOutput": 65536,
+            "license": "Proprietary"
+        },
+        {
+            "id": "gemini-2-5-pro",
+            "name": "Gemini 2.5 Pro",
+            "provider": "Google",
+            "type": "Reasoning",
+            "category": [
+                "reasoning",
+                "coding",
+                "research",
+                "vision"
+            ],
+            "contextWindow": 1048576,
+            "strengths": [
+                "#1 on LMArena chatbot rankings",
+                "1M+ context window",
+                "Superior agentic coding",
+                "Native thinking/reasoning",
+                "Strong multimodal understanding"
+            ],
+            "weaknesses": [
+                "Higher latency than Flash",
+                "More expensive",
+                "Requires Google AI API"
+            ],
+            "useCases": [
+                "Complex programming projects",
+                "Scientific research",
+                "Large document analysis",
+                "Code refactoring",
+                "Multimodal reasoning"
+            ],
+            "notRecommendedFor": [
+                "Real-time chatbots",
+                "Simple text generation",
+                "Budget projects"
+            ],
+            "performance": {
+                "speedTier": "moderate",
+                "latency": "2-5s",
+                "throughput": "Medium"
+            },
+            "costTier": "expensive",
+            "idealFor": [
+                "enterprise",
+                "researchers",
+                "developers"
+            ],
+            "pricing": {
+                "input": "$1.25/1M tokens",
+                "output": "$10/1M tokens",
+                "tier": "premium",
+                "inputNum": 1.25,
+                "outputNum": 10
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": true,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 92.0,
+                "humaneval": 92.5,
+                "gsm8k": 97.0,
+                "reasoning": 95,
+                "coding": 94,
+                "math": 96,
+                "language": 93,
+                "knowledge": 93
+            },
+            "apiEndpoint": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro",
+            "releaseDate": "2025-03",
+            "description": "Google's most capable model. Ranked #1 on LMArena leaderboard. Combines deep reasoning with a massive 1M context window and native multimodal understanding for frontier-level performance.",
+            "architecture": "Transformer MoE",
+            "parameterCount": "Undisclosed",
+            "knowledgeCutoff": "January 2025",
+            "trainingData": "Google proprietary multimodal data",
+            "maxOutput": 65536,
+            "license": "Proprietary"
+        },
+        {
+            "id": "deepseek-v3-1",
+            "name": "DeepSeek V3.1",
+            "provider": "DeepSeek",
+            "type": "LLM",
+            "category": [
+                "general-purpose",
+                "coding",
+                "reasoning"
+            ],
+            "contextWindow": 131072,
+            "strengths": [
+                "Open-source",
+                "Extremely cost-effective",
+                "Strong coding and math",
+                "128K context",
+                "Competitive with GPT-4o"
+            ],
+            "weaknesses": [
+                "Chinese company concerns for some users",
+                "API availability varies",
+                "Community still growing"
+            ],
+            "useCases": [
+                "General AI assistant",
+                "Code generation",
+                "Mathematical reasoning",
+                "Content creation",
+                "Self-hosting"
+            ],
+            "notRecommendedFor": [
+                "Enterprise with strict data residency requirements",
+                "Real-time voice applications"
+            ],
+            "performance": {
+                "speedTier": "fast",
+                "latency": "1-2s",
+                "throughput": "High"
+            },
+            "costTier": "cheap",
+            "idealFor": [
+                "developers",
+                "startups",
+                "researchers"
+            ],
+            "pricing": {
+                "input": "$0.27/1M tokens",
+                "output": "$1.10/1M tokens",
+                "tier": "budget",
+                "inputNum": 0.27,
+                "outputNum": 1.1
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": false,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 89.5,
+                "humaneval": 89.0,
+                "gsm8k": 95.0,
+                "reasoning": 90,
+                "coding": 89,
+                "math": 94,
+                "language": 88,
+                "knowledge": 89
+            },
+            "apiEndpoint": "https://api.deepseek.com/v1/chat/completions",
+            "releaseDate": "2025-03",
+            "description": "DeepSeek's latest general-purpose model. A 671B MoE model with only 37B active parameters, offering GPT-4o-class performance at a fraction of the cost. Fully open-source.",
+            "architecture": "Mixture of Experts (MoE)",
+            "parameterCount": "671B total / 37B active",
+            "knowledgeCutoff": "February 2025",
+            "trainingData": "Open web data + curated datasets",
+            "maxOutput": 16384,
+            "license": "Open Source (MIT)"
+        },
+        {
+            "id": "grok-4",
+            "name": "Grok 4",
+            "provider": "xAI",
+            "type": "Reasoning",
+            "category": [
+                "reasoning",
+                "coding",
+                "research"
+            ],
+            "contextWindow": 256000,
+            "strengths": [
+                "Advanced reasoning",
+                "Real-time X/Twitter integration",
+                "Strong at math and science",
+                "Long context",
+                "Fast iteration speed"
+            ],
+            "weaknesses": [
+                "Limited ecosystem",
+                "xAI platform dependent",
+                "Less tested than GPT/Claude",
+                "Newer model"
+            ],
+            "useCases": [
+                "Advanced mathematics",
+                "Scientific research",
+                "Real-time social analysis",
+                "Complex reasoning tasks",
+                "Competitive programming"
+            ],
+            "notRecommendedFor": [
+                "Production applications needing stability",
+                "Enterprise compliance-heavy use"
+            ],
+            "performance": {
+                "speedTier": "moderate",
+                "latency": "2-5s",
+                "throughput": "Medium"
+            },
+            "costTier": "expensive",
+            "idealFor": [
+                "researchers",
+                "developers",
+                "enterprise"
+            ],
+            "pricing": {
+                "input": "$3/1M tokens",
+                "output": "$15/1M tokens",
+                "tier": "premium",
+                "inputNum": 3,
+                "outputNum": 15
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": true,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 93.0,
+                "humaneval": 93.0,
+                "gsm8k": 97.0,
+                "reasoning": 96,
+                "coding": 93,
+                "math": 97,
+                "language": 91,
+                "knowledge": 92
+            },
+            "apiEndpoint": "https://api.x.ai/v1/chat/completions",
+            "releaseDate": "2025-07",
+            "description": "xAI's most advanced reasoning model. Achieved breakthrough scores on math and science benchmarks, including top performance on AIME 2025 and GPQA Diamond. Features deep thinking mode for complex problems.",
+            "architecture": "Transformer (undisclosed)",
+            "parameterCount": "Undisclosed",
+            "knowledgeCutoff": "May 2025",
+            "trainingData": "Proprietary + real-time X data",
+            "maxOutput": 16384,
+            "license": "Proprietary"
+        },
+        {
+            "id": "kimi-k2",
+            "name": "Kimi K2",
+            "provider": "Moonshot",
+            "type": "LLM",
+            "category": [
+                "coding",
+                "general-purpose",
+                "agentic"
+            ],
+            "contextWindow": 131072,
+            "strengths": [
+                "Open-source MoE model",
+                "1T total params",
+                "Excellent agentic capabilities",
+                "Strong coding performance",
+                "Apache 2.0 license"
+            ],
+            "weaknesses": [
+                "Large model requires significant resources",
+                "Newer provider",
+                "Less established ecosystem"
+            ],
+            "useCases": [
+                "Code generation",
+                "Agentic workflows",
+                "Complex reasoning",
+                "Tool use",
+                "Self-hosting at scale"
+            ],
+            "notRecommendedFor": [
+                "Small devices",
+                "Ultra-low latency requirements"
+            ],
+            "performance": {
+                "speedTier": "fast",
+                "latency": "1-3s",
+                "throughput": "High"
+            },
+            "costTier": "cheap",
+            "idealFor": [
+                "developers",
+                "researchers",
+                "enterprise"
+            ],
+            "pricing": {
+                "input": "$0.60/1M tokens",
+                "output": "$2.00/1M tokens",
+                "tier": "budget",
+                "inputNum": 0.6,
+                "outputNum": 2.0
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": false,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 88.0,
+                "humaneval": 90.5,
+                "gsm8k": 94.0,
+                "reasoning": 89,
+                "coding": 91,
+                "math": 93,
+                "language": 87,
+                "knowledge": 88
+            },
+            "apiEndpoint": "https://api.moonshot.cn/v1/chat/completions",
+            "releaseDate": "2025-07",
+            "description": "Moonshot AI's flagship open-source MoE model. 1 trillion total parameters with 32B active, rivaling Claude Sonnet 4 on coding benchmarks while being fully open-source under Apache 2.0.",
+            "architecture": "Mixture of Experts (MoE)",
+            "parameterCount": "1T total / 32B active",
+            "knowledgeCutoff": "May 2025",
+            "trainingData": "20T tokens from diverse sources",
+            "maxOutput": 16384,
+            "license": "Apache 2.0"
+        },
+        {
+            "id": "mistral-large-3",
+            "name": "Mistral Large 3",
+            "provider": "Mistral",
+            "type": "LLM",
+            "category": [
+                "general-purpose",
+                "coding",
+                "reasoning",
+                "vision"
+            ],
+            "contextWindow": 131072,
+            "strengths": [
+                "Strong multilingual support",
+                "Apache 2.0 license",
+                "Excellent function calling",
+                "128K context",
+                "Good for European compliance"
+            ],
+            "weaknesses": [
+                "Not as capable as GPT-5 or Claude Opus 4",
+                "Smaller community than top models"
+            ],
+            "useCases": [
+                "Enterprise workflows",
+                "Multilingual applications",
+                "Function calling",
+                "Code generation",
+                "EU-compliant deployments"
+            ],
+            "notRecommendedFor": [
+                "Cutting-edge research needing frontier models",
+                "Tasks requiring 1M+ context"
+            ],
+            "performance": {
+                "speedTier": "fast",
+                "latency": "1-2s",
+                "throughput": "High"
+            },
+            "costTier": "moderate",
+            "idealFor": [
+                "enterprise",
+                "developers",
+                "startups"
+            ],
+            "pricing": {
+                "input": "$2/1M tokens",
+                "output": "$6/1M tokens",
+                "tier": "standard",
+                "inputNum": 2,
+                "outputNum": 6
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": true,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 88.0,
+                "humaneval": 88.5,
+                "gsm8k": 93.0,
+                "reasoning": 88,
+                "coding": 88,
+                "math": 91,
+                "language": 92,
+                "knowledge": 89
+            },
+            "apiEndpoint": "https://api.mistral.ai/v1/chat/completions",
+            "releaseDate": "2025-03",
+            "description": "Mistral's most capable open-weight model. 123B parameters with strong multilingual support and now including vision capabilities. Apache 2.0 licensed for maximum flexibility.",
+            "architecture": "Dense Transformer",
+            "parameterCount": "123B",
+            "knowledgeCutoff": "January 2025",
+            "trainingData": "Multilingual web data + curated sources",
+            "maxOutput": 16384,
+            "license": "Apache 2.0"
+        },
+        {
+            "id": "gpt-o4-mini",
+            "name": "GPT o4-mini",
+            "provider": "OpenAI",
+            "type": "Reasoning",
+            "category": [
+                "reasoning",
+                "coding",
+                "math"
+            ],
+            "contextWindow": 200000,
+            "strengths": [
+                "Fast reasoning model",
+                "Very cost-effective for reasoning",
+                "Strong on STEM tasks",
+                "200K context",
+                "Image understanding"
+            ],
+            "weaknesses": [
+                "Less capable than full o-series models",
+                "Can be verbose",
+                "Reasoning mode adds latency"
+            ],
+            "useCases": [
+                "Math problem solving",
+                "Code debugging",
+                "Scientific reasoning",
+                "Educational content",
+                "Cost-effective reasoning"
+            ],
+            "notRecommendedFor": [
+                "Creative writing",
+                "Simple Q&A where reasoning is unnecessary"
+            ],
+            "performance": {
+                "speedTier": "fast",
+                "latency": "1-4s",
+                "throughput": "High"
+            },
+            "costTier": "moderate",
+            "idealFor": [
+                "developers",
+                "students",
+                "startups"
+            ],
+            "pricing": {
+                "input": "$1.10/1M tokens",
+                "output": "$4.40/1M tokens",
+                "tier": "standard",
+                "inputNum": 1.1,
+                "outputNum": 4.4
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": true,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 89.0,
+                "humaneval": 90.0,
+                "gsm8k": 96.0,
+                "reasoning": 93,
+                "coding": 90,
+                "math": 96,
+                "language": 88,
+                "knowledge": 88
+            },
+            "apiEndpoint": "https://api.openai.com/v1/chat/completions",
+            "releaseDate": "2025-04",
+            "description": "OpenAI's cost-effective reasoning model. Brings o-series reasoning capabilities at a much lower price point. Excellent for STEM tasks, coding, and math where step-by-step thinking helps.",
+            "architecture": "Transformer with reasoning",
+            "parameterCount": "Undisclosed",
+            "knowledgeCutoff": "March 2025",
+            "trainingData": "Proprietary",
+            "maxOutput": 16384,
+            "license": "Proprietary"
+        },
+        {
+            "id": "llama-4-scout",
+            "name": "Llama 4 Scout",
+            "provider": "Meta",
+            "type": "LLM",
+            "category": [
+                "general-purpose",
+                "vision",
+                "coding"
+            ],
+            "contextWindow": 10000000,
+            "strengths": [
+                "10M token context window",
+                "Open-source",
+                "17B active parameters",
+                "16 MoE experts",
+                "Native multimodal"
+            ],
+            "weaknesses": [
+                "Requires significant infrastructure",
+                "Relatively new",
+                "Not as capable as larger models on complex tasks"
+            ],
+            "useCases": [
+                "Ultra-long document analysis",
+                "Codebase understanding",
+                "Book-length content",
+                "Research workflows",
+                "Self-hosting"
+            ],
+            "notRecommendedFor": [
+                "Simple chatbots",
+                "Low-resource environments"
+            ],
+            "performance": {
+                "speedTier": "fast",
+                "latency": "1-3s",
+                "throughput": "High"
+            },
+            "costTier": "free",
+            "idealFor": [
+                "developers",
+                "researchers",
+                "enterprise"
+            ],
+            "pricing": {
+                "input": "Free (self-hosted)",
+                "output": "Free (self-hosted)",
+                "tier": "free",
+                "inputNum": 0,
+                "outputNum": 0
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": true,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 86.0,
+                "humaneval": 84.0,
+                "gsm8k": 91.0,
+                "reasoning": 85,
+                "coding": 84,
+                "math": 89,
+                "language": 88,
+                "knowledge": 86
+            },
+            "apiEndpoint": "https://api.groq.com/openai/v1/chat/completions",
+            "releaseDate": "2025-04",
+            "description": "Meta's groundbreaking open-source model with the industry's largest 10M token context window. A mixture-of-experts model with 109B total params and 17B active, ideal for ultra-long content processing.",
+            "architecture": "Mixture of Experts (MoE)",
+            "parameterCount": "109B total / 17B active",
+            "knowledgeCutoff": "February 2025",
+            "trainingData": "Open web + multilingual data",
+            "maxOutput": 16384,
+            "license": "Llama 4 Community License"
+        },
+        {
+            "id": "qwen3-235b",
+            "name": "Qwen3 235B-A22B",
+            "provider": "Alibaba",
+            "type": "LLM",
+            "category": [
+                "general-purpose",
+                "reasoning",
+                "coding",
+                "multilingual"
+            ],
+            "contextWindow": 131072,
+            "strengths": [
+                "Hybrid thinking modes",
+                "235B MoE architecture",
+                "Apache 2.0 open-source",
+                "119 language support",
+                "Strong math and coding"
+            ],
+            "weaknesses": [
+                "Large model footprint",
+                "Alibaba ecosystem",
+                "Less known in Western markets"
+            ],
+            "useCases": [
+                "Multilingual applications",
+                "Mathematical reasoning",
+                "Code generation",
+                "Enterprise AI",
+                "Self-hosting"
+            ],
+            "notRecommendedFor": [
+                "Ultra-low latency real-time apps",
+                "Edge deployment"
+            ],
+            "performance": {
+                "speedTier": "fast",
+                "latency": "1-3s",
+                "throughput": "High"
+            },
+            "costTier": "cheap",
+            "idealFor": [
+                "developers",
+                "researchers",
+                "enterprise"
+            ],
+            "pricing": {
+                "input": "$0.30/1M tokens",
+                "output": "$1.20/1M tokens",
+                "tier": "budget",
+                "inputNum": 0.3,
+                "outputNum": 1.2
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": false,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 88.5,
+                "humaneval": 88.0,
+                "gsm8k": 94.5,
+                "reasoning": 90,
+                "coding": 88,
+                "math": 94,
+                "language": 91,
+                "knowledge": 88
+            },
+            "apiEndpoint": "https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation",
+            "releaseDate": "2025-04",
+            "description": "Alibaba's flagship open-source MoE model. 235B total parameters with 22B active, supporting 119 languages and featuring hybrid thinking/non-thinking modes for flexible reasoning.",
+            "architecture": "Mixture of Experts (MoE)",
+            "parameterCount": "235B total / 22B active",
+            "knowledgeCutoff": "January 2025",
+            "trainingData": "36T tokens multilingual data",
+            "maxOutput": 16384,
+            "license": "Apache 2.0",
+            "multilingual": [
+                "English",
+                "Chinese",
+                "Japanese",
+                "Korean",
+                "French",
+                "Spanish",
+                "German",
+                "Arabic",
+                "Hindi",
+                "Russian",
+                "+109 more"
+            ]
+        },
+        {
+            "id": "claude-sonnet-4-5",
+            "name": "Claude Sonnet 4.5",
+            "provider": "Anthropic",
+            "type": "LLM",
+            "category": [
+                "coding",
+                "general-purpose",
+                "creative"
+            ],
+            "contextWindow": 200000,
+            "strengths": [
+                "Best creative writing in Claude family",
+                "Strong emotional intelligence",
+                "Excellent coding",
+                "Hybrid reasoning mode",
+                "Low hallucination rate"
+            ],
+            "weaknesses": [
+                "More expensive than Sonnet 4",
+                "Extended thinking adds latency",
+                "200K context limit"
+            ],
+            "useCases": [
+                "Creative content generation",
+                "Nuanced writing",
+                "Software development",
+                "Complex reasoning with thinking mode",
+                "Customer-facing applications"
+            ],
+            "notRecommendedFor": [
+                "Budget applications",
+                "Simple classification tasks"
+            ],
+            "performance": {
+                "speedTier": "fast",
+                "latency": "1-3s",
+                "throughput": "High"
+            },
+            "costTier": "expensive",
+            "idealFor": [
+                "developers",
+                "enterprise",
+                "content creators"
+            ],
+            "pricing": {
+                "input": "$3/1M tokens",
+                "output": "$15/1M tokens",
+                "tier": "premium",
+                "inputNum": 3,
+                "outputNum": 15
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": true,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 90.0,
+                "humaneval": 93.0,
+                "gsm8k": 95.5,
+                "reasoning": 93,
+                "coding": 93,
+                "math": 94,
+                "language": 94,
+                "knowledge": 92
+            },
+            "apiEndpoint": "https://api.anthropic.com/v1/messages",
+            "releaseDate": "2025-02",
+            "description": "Anthropic's most well-rounded model. Combines strong coding ability with superior creative writing and emotional intelligence. Features optional extended thinking mode for complex reasoning tasks.",
+            "architecture": "Transformer",
+            "parameterCount": "Undisclosed",
+            "knowledgeCutoff": "January 2025",
+            "trainingData": "Proprietary with Constitutional AI",
+            "maxOutput": 16000,
+            "license": "Proprietary"
+        },
+        {
+            "id": "claude-opus-4.6",
+            "name": "Claude Opus 4.6",
+            "provider": "Anthropic",
+            "type": "Reasoning",
+            "category": [
+                "reasoning",
+                "coding",
+                "agentic",
+                "enterprise",
+                "research"
+            ],
+            "contextWindow": 1000000,
+            "strengths": [
+                "Most capable Anthropic model to date",
+                "Adaptive thinking for dynamic reasoning depth",
+                "Context compaction for ultra-long conversations",
+                "1M token context window (beta)",
+                "128K max output tokens",
+                "Superior financial analysis & deep research",
+                "Best-in-class cybersecurity capabilities",
+                "Robust alignment and safety"
+            ],
+            "weaknesses": [
+                "Premium pricing at $5/$25 per 1M tokens",
+                "Long-context pricing doubles above 200K tokens",
+                "Slower inference than smaller models",
+                "Closed-source model",
+                "Requires high API tier for 1M context"
+            ],
+            "useCases": [
+                "Complex enterprise reasoning tasks",
+                "Long-running agentic workflows",
+                "Deep financial analysis",
+                "Advanced document creation",
+                "Cybersecurity threat analysis",
+                "Multi-step code generation"
+            ],
+            "notRecommendedFor": [
+                "Simple chatbot tasks (overkill)",
+                "Budget-sensitive applications",
+                "Ultra-low latency requirements",
+                "High-volume batch processing without caching"
+            ],
+            "performance": {
+                "speedTier": "moderate",
+                "latency": "3-8s",
+                "throughput": "Medium"
+            },
+            "costTier": "premium",
+            "idealFor": [
+                "enterprise",
+                "researchers",
+                "developers"
+            ],
+            "pricing": {
+                "input": "$5/1M tokens",
+                "output": "$25/1M tokens",
+                "tier": "premium",
+                "inputNum": 5,
+                "outputNum": 25
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": true,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 95.2,
+                "humaneval": 96.1,
+                "gsm8k": 98.0,
+                "hellaswag": 95.1,
+                "arc": 97.5,
+                "reasoning": 97,
+                "coding": 95,
+                "math": 97,
+                "language": 96,
+                "knowledge": 96
+            },
+            "apiEndpoint": "https://api.anthropic.com/v1/messages",
+            "releaseDate": "2026-02",
+            "description": "Anthropic's latest and most powerful model. Features adaptive thinking that dynamically adjusts reasoning depth, context compaction for managing ultra-long conversations, and 1M token context window. Excels at complex enterprise tasks, financial analysis, cybersecurity, and agentic workflows. Represents the frontier of Claude model capabilities.",
+            "architecture": "Transformer",
+            "parameterCount": "Undisclosed",
+            "knowledgeCutoff": "September 2025",
+            "trainingData": "Proprietary with Constitutional AI v3",
+            "maxOutput": 128000,
+            "license": "Proprietary"
+        },
+        {
+            "id": "claude-opus-4.5",
+            "name": "Claude Opus 4.5",
+            "provider": "Anthropic",
+            "type": "Reasoning",
+            "category": [
+                "coding",
+                "reasoning",
+                "agentic",
+                "enterprise"
+            ],
+            "contextWindow": 200000,
+            "strengths": [
+                "First model to score >80% on SWE-bench Verified (80.9%)",
+                "Token-efficient — uses 76% fewer output tokens",
+                "Effort parameter for cost/performance tuning",
+                "Superior coding across 7 of 8 languages",
+                "Enhanced computer use with zoom tool",
+                "Infinite Chats mechanism for long conversations",
+                "Most robustly aligned model with prompt injection resistance",
+                "66% cheaper than previous Opus models"
+            ],
+            "weaknesses": [
+                "Still expensive at $5/$25 per 1M tokens",
+                "200K default context (1M requires beta access)",
+                "Slower than Sonnet variants on simple queries",
+                "Closed-source model",
+                "Knowledge cutoff of March 2025"
+            ],
+            "useCases": [
+                "Professional software engineering",
+                "Complex multi-step agentic tasks",
+                "Enterprise document processing",
+                "Code review and refactoring",
+                "Visual document interpretation (80.7% MMMU)",
+                "Research and complex analysis"
+            ],
+            "notRecommendedFor": [
+                "Simple Q&A chatbots",
+                "High-volume low-complexity tasks",
+                "Real-time interactive gaming",
+                "Budget student projects"
+            ],
+            "performance": {
+                "speedTier": "moderate",
+                "latency": "3-6s",
+                "throughput": "Medium"
+            },
+            "costTier": "premium",
+            "idealFor": [
+                "enterprise",
+                "developers",
+                "researchers"
+            ],
+            "pricing": {
+                "input": "$5/1M tokens",
+                "output": "$25/1M tokens",
+                "tier": "premium",
+                "inputNum": 5,
+                "outputNum": 25
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": true,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 94.5,
+                "humaneval": 95.3,
+                "gsm8k": 97.5,
+                "hellaswag": 94.8,
+                "arc": 97.0,
+                "reasoning": 96,
+                "coding": 94,
+                "math": 96,
+                "language": 95,
+                "knowledge": 95
+            },
+            "apiEndpoint": "https://api.anthropic.com/v1/messages",
+            "releaseDate": "2025-11",
+            "description": "Anthropic's powerhouse for professional software engineering and enterprise work. First model to break 80% on SWE-bench Verified while using 76% fewer tokens. Features a tunable effort parameter letting you balance speed vs depth. Infinite Chats mechanism handles ultra-long conversations without losing context.",
+            "architecture": "Transformer",
+            "parameterCount": "Undisclosed",
+            "knowledgeCutoff": "March 2025",
+            "trainingData": "Proprietary with Constitutional AI v2",
+            "maxOutput": 64000,
+            "license": "Proprietary"
+        },
+        {
+            "id": "gpt-5.2",
+            "name": "GPT-5.2",
+            "provider": "OpenAI",
+            "type": "Reasoning",
+            "category": [
+                "reasoning",
+                "coding",
+                "multimodal",
+                "general-purpose",
+                "research"
+            ],
+            "contextWindow": 400000,
+            "strengths": [
+                "Expert-level 70.9% on GDPval benchmark",
+                "400K token context window",
+                "128K max output tokens",
+                "Multi-variant system (Instant, Thinking, Auto)",
+                "55.6% on SWE-Bench Pro — new high",
+                "xhigh reasoning effort for max analytical depth",
+                "Response compaction for extended context management",
+                "Built-in apply_patch and shell tools",
+                "Near 100% accuracy at 256K context (Thinking)"
+            ],
+            "weaknesses": [
+                "Thinking mode slower on complex queries",
+                "Reasoning tokens billed as output",
+                "Closed-source model",
+                "Enterprise-focused pricing",
+                "Still prone to occasional hallucinations"
+            ],
+            "useCases": [
+                "Complex mathematical reasoning",
+                "Professional software engineering",
+                "Enterprise knowledge work",
+                "Multi-modal document analysis",
+                "Scientific research",
+                "Long-context code generation"
+            ],
+            "notRecommendedFor": [
+                "Simple chat applications",
+                "Mobile-first low-latency apps",
+                "Budget-constrained projects",
+                "Tasks needing real-time response"
+            ],
+            "performance": {
+                "speedTier": "moderate",
+                "latency": "2-6s",
+                "throughput": "High"
+            },
+            "costTier": "mid-range",
+            "idealFor": [
+                "enterprise",
+                "researchers",
+                "developers"
+            ],
+            "pricing": {
+                "input": "$1.75/1M tokens",
+                "output": "$14/1M tokens",
+                "tier": "mid-range",
+                "inputNum": 1.75,
+                "outputNum": 14
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": true,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 95.0,
+                "humaneval": 96.5,
+                "gsm8k": 98.2,
+                "hellaswag": 95.5,
+                "arc": 97.8,
+                "reasoning": 97,
+                "coding": 96,
+                "math": 98,
+                "language": 96,
+                "knowledge": 96
+            },
+            "apiEndpoint": "https://api.openai.com/v1/chat/completions",
+            "releaseDate": "2025-12",
+            "description": "OpenAI's iterative powerhouse succeeding GPT-5.1. Achieves expert-level performance (70.9% GDPval) across 44 knowledge work occupations. Features Instant mode for fast tasks, Thinking mode for deep reasoning with near-100% accuracy at 256K tokens, and Auto mode for intelligent routing. Built-in tools like apply_patch and shell make it a coding powerhouse.",
+            "architecture": "Transformer (MoE)",
+            "parameterCount": "Undisclosed (rumored 1T+ MoE)",
+            "knowledgeCutoff": "August 2025",
+            "trainingData": "Proprietary multimodal dataset",
+            "maxOutput": 128000,
+            "license": "Proprietary"
+        },
+        {
+            "id": "gpt-5.3-codex",
+            "name": "GPT-5.3 Codex",
+            "provider": "OpenAI",
+            "type": "Coding",
+            "category": [
+                "coding",
+                "agentic",
+                "reasoning",
+                "cybersecurity"
+            ],
+            "contextWindow": 1000000,
+            "strengths": [
+                "Combines GPT-5.2 Codex coding + GPT-5.2 reasoning",
+                "Agentic collaborator for multi-step tasks",
+                "25% faster than predecessor (infra improvements)",
+                "Trained on cybersecurity vulnerability detection",
+                "1M token context window",
+                "Can debug its own code autonomously",
+                "Orchestrates API calls and manages complex task states",
+                "GPT-6 level reasoning in efficient architecture"
+            ],
+            "weaknesses": [
+                "Not yet available via general API",
+                "Optimized for code — less suited for creative writing",
+                "Very new (February 2026) — limited real-world testing",
+                "High compute requirements",
+                "Limited documentation at launch"
+            ],
+            "useCases": [
+                "Enterprise software development",
+                "Multi-file code generation and refactoring",
+                "Cybersecurity vulnerability scanning",
+                "Agentic coding workflows",
+                "Large codebase analysis",
+                "DevOps and CI/CD automation"
+            ],
+            "notRecommendedFor": [
+                "Creative writing tasks",
+                "Simple conversations",
+                "Budget-constrained projects",
+                "Non-coding tasks"
+            ],
+            "performance": {
+                "speedTier": "fast",
+                "latency": "1-4s",
+                "throughput": "Very High"
+            },
+            "costTier": "mid-range",
+            "idealFor": [
+                "developers",
+                "enterprise",
+                "startups"
+            ],
+            "pricing": {
+                "input": "$1.50/1M tokens",
+                "output": "$6/1M tokens",
+                "tier": "mid-range",
+                "inputNum": 1.5,
+                "outputNum": 6
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": false,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "reasoning": 96,
+                "coding": 98,
+                "math": 97,
+                "language": 93,
+                "knowledge": 94
+            },
+            "apiEndpoint": "https://api.openai.com/v1/chat/completions",
+            "releaseDate": "2026-02",
+            "description": "OpenAI's most advanced coding model, codenamed 'Garlic'. Combines GPT-5.2's coding prowess with its reasoning power to create an agentic coding collaborator. Can debug its own code, orchestrate API calls, and manage complex multi-step task states. Trained on cybersecurity data for vulnerability detection. 25% faster than its predecessor.",
+            "architecture": "Transformer (Cognitive-Dense MoE)",
+            "parameterCount": "Undisclosed",
+            "knowledgeCutoff": "August 2025",
+            "trainingData": "Proprietary code + cybersecurity dataset",
+            "maxOutput": 128000,
+            "license": "Proprietary"
+        },
+        {
+            "id": "gpt-5.1",
+            "name": "GPT-5.1",
+            "provider": "OpenAI",
+            "type": "Reasoning",
+            "category": [
+                "reasoning",
+                "coding",
+                "multimodal",
+                "general-purpose"
+            ],
+            "contextWindow": 400000,
+            "strengths": [
+                "Adaptive reasoning — dynamically adjusts thinking time",
+                "Three variants: Instant, Thinking, and Auto",
+                "400K context window (272K input + 128K output)",
+                "8 built-in personality presets for tone control",
+                "Dramatically improved instruction following",
+                "Codex-Max variant handles multi-hour coding workflows",
+                "Compaction technology for unlimited effective context",
+                "Real-time video analysis support"
+            ],
+            "weaknesses": [
+                "Same pricing as GPT-5 ($1.25/$10)",
+                "Thinking mode slower on hard problems",
+                "Reasoning tokens billed as output",
+                "Closed-source model",
+                "Gradual rollout — not all variants available immediately"
+            ],
+            "useCases": [
+                "Enterprise software engineering",
+                "Complex reasoning with adaptive depth",
+                "Multi-modal document processing",
+                "Real-time video analysis",
+                "Personalized AI assistant",
+                "Large codebase management"
+            ],
+            "notRecommendedFor": [
+                "Simple chatbot tasks",
+                "Extremely budget-sensitive projects",
+                "On-premise deployments",
+                "Privacy-critical applications"
+            ],
+            "performance": {
+                "speedTier": "fast",
+                "latency": "1-5s",
+                "throughput": "High"
+            },
+            "costTier": "mid-range",
+            "idealFor": [
+                "enterprise",
+                "developers",
+                "startups"
+            ],
+            "pricing": {
+                "input": "$1.25/1M tokens",
+                "output": "$10/1M tokens",
+                "tier": "mid-range",
+                "inputNum": 1.25,
+                "outputNum": 10
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": true,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 94.2,
+                "humaneval": 95.0,
+                "gsm8k": 97.8,
+                "hellaswag": 94.5,
+                "arc": 97.0,
+                "reasoning": 96,
+                "coding": 95,
+                "math": 97,
+                "language": 96,
+                "knowledge": 95
+            },
+            "apiEndpoint": "https://api.openai.com/v1/chat/completions",
+            "releaseDate": "2025-11",
+            "description": "OpenAI's refined GPT-5 iteration with adaptive reasoning that dynamically adjusts computational effort. Available in Instant (fast), Thinking (deep), and Auto (smart routing) variants. Features 8 personality presets for tone customization and Codex-Max for multi-hour coding marathons. Compaction technology effectively eliminates context limits for coding.",
+            "architecture": "Transformer (MoE)",
+            "parameterCount": "Undisclosed (rumored 1T+ MoE)",
+            "knowledgeCutoff": "June 2025",
+            "trainingData": "Proprietary multimodal dataset",
+            "maxOutput": 128000,
+            "license": "Proprietary"
+        },
+        {
+            "id": "gpt-5-mini",
+            "name": "GPT-5 Mini",
+            "provider": "OpenAI",
+            "type": "Reasoning",
+            "category": [
+                "reasoning",
+                "coding",
+                "budget",
+                "general-purpose"
+            ],
+            "contextWindow": 400000,
+            "strengths": [
+                "80% of GPT-5 performance at 20% cost",
+                "Ultra-cheap: $0.25 input / $2 output per 1M tokens",
+                "400K token context window",
+                "128K max output tokens",
+                "Three adjustable reasoning efforts (low/medium/high)",
+                "Multimodal: text + vision",
+                "Faster than GPT-5 standard",
+                "Excellent math, coding, and vision tasks"
+            ],
+            "weaknesses": [
+                "Not as capable as full GPT-5 on complex tasks",
+                "Less nuanced reasoning than GPT-5.1/5.2",
+                "Fewer built-in personality options",
+                "Still closed-source",
+                "May struggle on frontier-level research problems"
+            ],
+            "useCases": [
+                "Cost-efficient AI chatbots",
+                "High-volume API applications",
+                "Education and student projects",
+                "Quick coding assistance",
+                "Math and STEM tutoring",
+                "Mobile and budget-friendly AI apps"
+            ],
+            "notRecommendedFor": [
+                "Frontier research requiring max intelligence",
+                "Enterprise compliance-critical applications",
+                "Ultra-complex agentic workflows",
+                "Tasks needing >GPT-5.1 quality"
+            ],
+            "performance": {
+                "speedTier": "very-fast",
+                "latency": "0.5-2s",
+                "throughput": "Very High"
+            },
+            "costTier": "budget",
+            "idealFor": [
+                "startups",
+                "students",
+                "developers",
+                "hobbyists"
+            ],
+            "pricing": {
+                "input": "$0.25/1M tokens",
+                "output": "$2/1M tokens",
+                "tier": "budget",
+                "inputNum": 0.25,
+                "outputNum": 2
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": true,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 90.5,
+                "humaneval": 91.0,
+                "gsm8k": 95.0,
+                "reasoning": 91,
+                "coding": 90,
+                "math": 94,
+                "language": 92,
+                "knowledge": 90
+            },
+            "apiEndpoint": "https://api.openai.com/v1/chat/completions",
+            "releaseDate": "2025-08",
+            "description": "OpenAI's compact powerhouse — 80% of GPT-5's capability at just 20% of the cost. Successor to o4-mini, designed for fast, cost-efficient reasoning with adjustable effort levels. Excels at math, coding, and visual tasks. Perfect for developers who need strong AI without enterprise pricing. 400K context window at $0.25/1M input tokens makes it the best value in the GPT-5 family.",
+            "architecture": "Transformer (Compact MoE)",
+            "parameterCount": "Undisclosed (smaller than GPT-5)",
+            "knowledgeCutoff": "April 2025",
+            "trainingData": "Proprietary multimodal dataset",
+            "maxOutput": 128000,
+            "license": "Proprietary"
+        },
+        {
+            "id": "gemini-3-pro",
+            "name": "Gemini 3 Pro",
+            "provider": "Google",
+            "type": "Reasoning",
+            "category": [
+                "reasoning",
+                "multimodal",
+                "agentic",
+                "coding",
+                "general-purpose"
+            ],
+            "contextWindow": 1000000,
+            "strengths": [
+                "1M token context window",
+                "Deep Think mode for enhanced problem-solving",
+                "Vibe Coding — generates full apps from natural language",
+                "Advanced multimodal: text, images, audio, video, code",
+                "Sparse MoE architecture for efficiency",
+                "Agentic workflows with multi-step planning",
+                "64K max output tokens",
+                "Available on Google AI Studio and Vertex AI"
+            ],
+            "weaknesses": [
+                "Premium API pricing ($2-4 input / $12-18 output)",
+                "Long-context pricing doubles above 200K tokens",
+                "Preview status — still maturing",
+                "Consumer subscription can be very expensive ($250/mo Ultra)",
+                "Knowledge cutoff of January 2025"
+            ],
+            "useCases": [
+                "Enterprise AI assistants",
+                "Complex multi-modal analysis",
+                "Full application generation (Vibe Coding)",
+                "Deep research and reasoning tasks",
+                "Video and audio understanding",
+                "Agentic coding workflows"
+            ],
+            "notRecommendedFor": [
+                "Budget-sensitive projects",
+                "Simple text-only tasks",
+                "Real-time low-latency gaming",
+                "On-premise deployments"
+            ],
+            "performance": {
+                "speedTier": "moderate",
+                "latency": "2-6s",
+                "throughput": "High"
+            },
+            "costTier": "expensive",
+            "idealFor": [
+                "enterprise",
+                "researchers",
+                "developers"
+            ],
+            "pricing": {
+                "input": "$2/1M tokens",
+                "output": "$12/1M tokens",
+                "tier": "premium",
+                "inputNum": 2,
+                "outputNum": 12
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": true,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 94.8,
+                "humaneval": 94.5,
+                "gsm8k": 97.5,
+                "reasoning": 96,
+                "coding": 94,
+                "math": 97,
+                "language": 96,
+                "knowledge": 96
+            },
+            "apiEndpoint": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-pro",
+            "releaseDate": "2025-11",
+            "description": "Google's most advanced AI model. Features Deep Think mode for enhanced problem-solving, Vibe Coding to generate full applications from natural language descriptions, and 1M token context window. Built on a sparse MoE Transformer architecture for efficient yet powerful reasoning across text, images, audio, video, and code.",
+            "architecture": "Transformer (Sparse MoE)",
+            "parameterCount": "Undisclosed",
+            "knowledgeCutoff": "January 2025",
+            "trainingData": "Proprietary multimodal dataset",
+            "maxOutput": 64000,
+            "license": "Proprietary"
+        },
+        {
+            "id": "gemini-3-flash",
+            "name": "Gemini 3 Flash",
+            "provider": "Google",
+            "type": "Multimodal",
+            "category": [
+                "general-purpose",
+                "coding",
+                "multimodal",
+                "budget"
+            ],
+            "contextWindow": 1000000,
+            "strengths": [
+                "3x faster than Gemini 2.5 Pro",
+                "Pro-level intelligence at Flash-level cost",
+                "Uses 30% fewer tokens on average",
+                "78% on SWE-bench Verified for coding",
+                "1M token context window",
+                "Free for end-users in Gemini app",
+                "Ultra-cheap API: $0.50 input / $3 output per 1M tokens",
+                "Supports text, images, video, audio, PDF"
+            ],
+            "weaknesses": [
+                "Not as deep as Gemini 3 Pro on complex reasoning",
+                "65.5K max output (lower than some competitors)",
+                "Preview status — still being refined",
+                "Knowledge cutoff of January 2025",
+                "Less suitable for frontier research problems"
+            ],
+            "useCases": [
+                "High-volume production AI apps",
+                "Cost-effective coding assistants",
+                "Multimodal document analysis",
+                "Consumer-facing AI products",
+                "Quick information extraction",
+                "PDF and video summarization"
+            ],
+            "notRecommendedFor": [
+                "Frontier research requiring maximum depth",
+                "Tasks need >65K output tokens",
+                "Specialized domain expertise",
+                "Privacy-critical on-premise needs"
+            ],
+            "performance": {
+                "speedTier": "very-fast",
+                "latency": "0.5-2s",
+                "throughput": "Very High"
+            },
+            "costTier": "budget",
+            "idealFor": [
+                "startups",
+                "developers",
+                "students",
+                "enterprise"
+            ],
+            "pricing": {
+                "input": "$0.50/1M tokens",
+                "output": "$3/1M tokens",
+                "tier": "budget",
+                "inputNum": 0.5,
+                "outputNum": 3
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": true,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 93.0,
+                "humaneval": 93.5,
+                "gsm8k": 96.5,
+                "reasoning": 94,
+                "coding": 93,
+                "math": 96,
+                "language": 95,
+                "knowledge": 94
+            },
+            "apiEndpoint": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash",
+            "releaseDate": "2025-12",
+            "description": "Google's speed-optimized powerhouse delivering Pro-level intelligence at a fraction of the cost. 3x faster than Gemini 2.5 Pro while using 30% fewer tokens. Achieves 78% on SWE-bench Verified for coding tasks. Free for consumers in the Gemini app, and just $0.50/1M input tokens for developers. The best value multimodal model available.",
+            "architecture": "Transformer (Sparse MoE)",
+            "parameterCount": "Undisclosed",
+            "knowledgeCutoff": "January 2025",
+            "trainingData": "Proprietary multimodal dataset",
+            "maxOutput": 65536,
+            "license": "Proprietary"
+        },
+        {
+            "id": "grok-code",
+            "name": "Grok Code Fast 1",
+            "provider": "xAI",
+            "type": "Coding",
+            "category": [
+                "coding",
+                "agentic",
+                "budget"
+            ],
+            "contextWindow": 256000,
+            "strengths": [
+                "Ultra-fast: 92-239 tokens/second throughput",
+                "Ultra-cheap: $0.20 input / $1.50 output per 1M tokens",
+                "256K token context window for large codebases",
+                "70.8% on SWE-Bench Verified",
+                "90%+ prompt cache hit rate in partner workflows",
+                "Built from scratch for code — not a fine-tune",
+                "Supports TypeScript, Python, Java, Rust, C++, Go",
+                "Deep IDE integration (Cursor, Copilot, Windsurf)"
+            ],
+            "weaknesses": [
+                "Slow time-to-first-token latency",
+                "Optimized for code — weaker on general tasks",
+                "MoE architecture (314B) may be inconsistent",
+                "Better for async/batch jobs than real-time",
+                "Limited general-purpose capabilities",
+                "Relatively new model with less ecosystem"
+            ],
+            "useCases": [
+                "IDE-integrated coding assistance",
+                "Project scaffolding and boilerplate",
+                "Bug fixing and code analysis",
+                "Large codebase navigation and search",
+                "DevOps and terminal operations",
+                "High-volume batch code generation"
+            ],
+            "notRecommendedFor": [
+                "General-purpose AI assistant",
+                "Creative writing",
+                "Real-time interactive chat",
+                "Multimodal tasks (no vision)"
+            ],
+            "performance": {
+                "speedTier": "very-fast",
+                "latency": "1-3s (first token slower)",
+                "throughput": "Very High"
+            },
+            "costTier": "budget",
+            "idealFor": [
+                "developers",
+                "startups",
+                "enterprise"
+            ],
+            "pricing": {
+                "input": "$0.20/1M tokens",
+                "output": "$1.50/1M tokens",
+                "tier": "budget",
+                "inputNum": 0.2,
+                "outputNum": 1.5
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": false,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "coding": 95,
+                "reasoning": 88,
+                "math": 85,
+                "language": 82
+            },
+            "apiEndpoint": "https://api.x.ai/v1/chat/completions",
+            "releaseDate": "2025-08",
+            "description": "xAI's purpose-built coding model designed for raw speed and IDE integration. Built from scratch (not a fine-tune) with a training corpus rich in real pull requests and practical coding tasks. Achieves 70.8% on SWE-Bench with 92-239 tokens/sec throughput. Available in Cursor, GitHub Copilot, Windsurf, and more. The cheapest high-quality coding model at $0.20/1M input tokens.",
+            "architecture": "Transformer (MoE, 314B parameters)",
+            "parameterCount": "314B (MoE)",
+            "knowledgeCutoff": "June 2025",
+            "trainingData": "Code-focused: real pull requests & practical tasks",
+            "maxOutput": 65536,
+            "license": "Proprietary"
+        },
+        {
+            "id": "claude-sonnet-4-1m",
+            "name": "Sonnet 4 1M",
+            "provider": "Anthropic",
+            "type": "Reasoning",
+            "category": [
+                "reasoning",
+                "coding",
+                "general-purpose",
+                "long-context"
+            ],
+            "contextWindow": 1000000,
+            "strengths": [
+                "1M token context window — process entire codebases",
+                "Same intelligence as Sonnet 4 with 5x more context",
+                "Excellent balance of speed, cost, and capability",
+                "Strong coding and reasoning performance",
+                "Tiered pricing keeps standard usage affordable",
+                "Available on AWS Bedrock and Vertex AI",
+                "Extended thinking mode for complex reasoning",
+                "Batch API offers 50% discount"
+            ],
+            "weaknesses": [
+                "Pricing doubles above 200K input tokens",
+                "Requires API tier 4+ for 1M context access",
+                "Slower on very long context prompts",
+                "Beta feature — may have stability issues",
+                "Output capped at 64K tokens",
+                "Not as powerful as Opus variants"
+            ],
+            "useCases": [
+                "Entire codebase analysis and refactoring",
+                "Long document summarization",
+                "Legal and financial document review",
+                "Multi-file code understanding",
+                "Book-length content processing",
+                "Research paper analysis"
+            ],
+            "notRecommendedFor": [
+                "Simple short-context tasks (overkill)",
+                "Budget projects needing >200K tokens frequently",
+                "Real-time interactive applications",
+                "Tasks requiring Opus-level intelligence"
+            ],
+            "performance": {
+                "speedTier": "moderate",
+                "latency": "2-8s",
+                "throughput": "Medium"
+            },
+            "costTier": "mid-range",
+            "idealFor": [
+                "developers",
+                "enterprise",
+                "researchers"
+            ],
+            "pricing": {
+                "input": "$3/1M tokens",
+                "output": "$15/1M tokens",
+                "tier": "mid-range",
+                "inputNum": 3,
+                "outputNum": 15
+            },
+            "capabilities": {
+                "toolCalling": true,
+                "streaming": true,
+                "vision": true,
+                "functionCalling": true,
+                "jsonMode": true
+            },
+            "benchmarks": {
+                "mmlu": 92.5,
+                "humaneval": 93.0,
+                "gsm8k": 96.5,
+                "reasoning": 93,
+                "coding": 92,
+                "math": 95,
+                "language": 94,
+                "knowledge": 93
+            },
+            "apiEndpoint": "https://api.anthropic.com/v1/messages",
+            "releaseDate": "2025-08",
+            "description": "Claude Sonnet 4 with an extended 1 million token context window. Process entire codebases, lengthy legal documents, or book-length content in a single prompt. Maintains Sonnet 4's excellent balance of intelligence and speed. Standard pricing up to 200K tokens, with long-context pricing above that. Available via MAX subscription or API tier 4+.",
+            "architecture": "Transformer",
+            "parameterCount": "Undisclosed",
+            "knowledgeCutoff": "March 2025",
+            "trainingData": "Proprietary with Constitutional AI",
+            "maxOutput": 64000,
+            "license": "Proprietary"
+        }
+    ]
+}
