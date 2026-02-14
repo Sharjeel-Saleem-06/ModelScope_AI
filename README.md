@@ -93,7 +93,5 @@ This project is licensed under the MIT License.
 
 ---
 
-<p align="center">
-  Built with ❤️ by Muhammad Sharjeel using <strong>ModelScope AI</strong>
-</p>
+
 # ModelScope_AI
